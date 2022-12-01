@@ -9,7 +9,7 @@
     "react-router": "^6.4.4"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx"
+    "build": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx"
   },
   "devDependencies": {
     "esbuild": "^0.14.38",
