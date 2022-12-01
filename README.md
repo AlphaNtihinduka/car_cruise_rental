@@ -1,3 +1,24 @@
-# car_rental
+# README
 
-![drawSQL-export-2022-12-01_15_35](https://user-images.githubusercontent.com/106079814/205066835-4be51fb7-88c7-405f-ae72-d16b766652c8.png)
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

@@ -1,0 +1,18 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-redux": "^8.0.5",
+    "react-router": "^6.4.4"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.38",
+    "esbuild-loader": "^2.18.0"
+  }
+}
