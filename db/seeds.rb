@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+users = User.create(name: "Natacha", email: "natacha@gmail.com", password: "natacha123")
+
 cars = Car.create([
     { image: "app/assets/images/Cruise-A.png" , name: "Cruise-A" , description:"Yellow fast Ford with a luxurious interior. Ready to give you the best comfort. ", price_per_day: 300.0 , user_id: 1 }, 
 
