@@ -13,12 +13,13 @@ class Api::V1::CarsController < ApplicationController
 
   # POST /cars
   def create
+    # @user = User.find(params[:id])
     @car = Car.new(car_params)
 
-    if current_user.role == 'admin'
-      @car.save
+    
+    if @car.save
       render json: @car, status: :created
-    elsif current_user.role != 'admin'
+    elsif 
       render json: { message: 'You are not an admin user' }
     else
       render json: @car.errors, status: :unprocessable_entity
@@ -36,10 +37,13 @@ class Api::V1::CarsController < ApplicationController
 
   # DELETE /cars/1
   def destroy
-    @car.destroy
-    render json: car.all
+    @car = Car.find(params[:id])
+    @car.delete
+    # render json: car.all
   end
-
+  
+  alias delete destroy
+  
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -49,7 +53,7 @@ class Api::V1::CarsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def car_params
-    params.require(:car).permit(:image ,:name, :description, :price_per_day)
+    params.require(:car).permit(:image ,:name, :description, :price_per_day, :user_id)
   end
 
 end
