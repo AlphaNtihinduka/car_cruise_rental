@@ -13,15 +13,14 @@ class Api::V1::ReservationsController < ApplicationController
 
   # POST /reservations
   def create
-   @reservation = reservation.new(reservation_params)
-
-    if current_user.role == 'admin'
-     @reservation.save
-      render json:@reservation, status: :created
-    elsif current_user.role != 'admin'
+   @reservation = Reservation.new(reservation_params)
+    
+    if @reservation.save
+      render json: @reservation, status: :created
+    elsif 
       render json: { message: 'You are not an admin user' }
     else
-      render json:@reservation.errors, status: :unprocessable_entity
+      render json: @reservation.errors, status: :unprocessable_entity
     end
   end
 
@@ -36,9 +35,13 @@ class Api::V1::ReservationsController < ApplicationController
 
   # DELETE /reservations/1
   def destroy
-   @reservation.destroy
-    render json: reservation.all
+    @reservation = Reservation.find(params[:id])
+    @reservation.delete
+   
   end
+  
+  alias delete destroy
+
 
   private
 
@@ -49,7 +52,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:image ,:name, :description, :price_per_day)
+    params.require(:reservation).permit(:days, :pick_date, :car_id,:user_id )
   end
 
 end

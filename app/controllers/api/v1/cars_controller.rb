@@ -1,7 +1,7 @@
 class Api::V1::CarsController < ApplicationController
  
   def index
-    @cars = Car.all
+    @cars = Car.all.order(created_at: :desc)
     render json: @cars
   end
 
@@ -39,11 +39,11 @@ class Api::V1::CarsController < ApplicationController
   def destroy
     @car = Car.find(params[:id])
     @car.delete
-    # render json: car.all
+   
   end
   
   alias delete destroy
-  
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
