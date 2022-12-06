@@ -7,12 +7,13 @@ class Api::V1::CarsController < ApplicationController
 
    # GET /cars/1
   def show
+    @car = Car.find(params[:id])
     render json: @car
   end
 
   # POST /cars
   def create
-    @car = car.new(car_params)
+    @car = Car.new(car_params)
 
     if current_user.role == 'admin'
       @car.save

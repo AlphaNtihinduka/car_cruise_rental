@@ -34,3 +34,12 @@ cars = Car.create([
     { image: "app/assets/images/Cruise-L.png" , name: "Cruise-L", description: "White BMW M5.The best for your family vacation." , price_per_day: 1000.0  , user_id: 1 }
    
  ])
+
+ reservations = Reservation.create([
+    { days: 5 , pick_date: "12/6/2022" , car_id: 3 , user_id: 1 }, 
+
+    { days: 7, pick_date: "12/5/2022" , car_id: 6 , user_id: 1 },
+
+    { days: 20 , pick_date: "12/6/2022" , car_id: 1 , user_id: 1 },  
+       
+ ])
