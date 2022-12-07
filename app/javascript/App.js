@@ -1,9 +1,9 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import CarDetail from "./components/CarDetail";
-import CarListing from "./components/CarListing";
-import Navigation from "./components/Navigation";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import CarDetail from './components/CarDetail';
+import CarListing from './components/CarListing';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
