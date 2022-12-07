@@ -3,5 +3,4 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :cars, through: :reservations
   has_many :reservations
-  
 end
