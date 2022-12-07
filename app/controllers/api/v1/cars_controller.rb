@@ -17,7 +17,6 @@ class Api::V1::CarsController < ApplicationController
 
     if @car.save
       render json: @car, status: :created
-    elsif render json: { message: 'You are not an admin user' }
     else
       render json: @car.errors, status: :unprocessable_entity
     end
