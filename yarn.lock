@@ -4356,7 +4356,9 @@
   "resolved" "https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz"
   "version" "3.2.3"
 
-"webpack@^4.40.0 || ^5.0.0", "webpack@^5.1.0":
+"webpack@^4.40.0 || ^5.0.0", "webpack@^5.1.0", "webpack@^5.75.0":
+  "integrity" "sha512-piaIaoVJlqMsPtX/+3KTTO6jfvrSYgauFVdt8cr9LTHKmcq/AMd4mhzsiP7ZF/PGRNPGA8336jldh9l2Kt2ogQ=="
+  "resolved" "https://registry.npmjs.org/webpack/-/webpack-5.75.0.tgz"
   "version" "5.75.0"
   dependencies:
     "@types/eslint-scope" "^3.7.3"

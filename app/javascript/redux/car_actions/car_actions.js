@@ -1,11 +1,11 @@
-import { ActionTypes } from '../constants/actionTypes';
+import { SET_CARS, SELECTED_CAR } from '../constants/actionTypes';
 
 export const setCars = (cars) => ({
-  type: ActionTypes.SET_CARS,
+  type: SET_CARS,
   payload: cars,
 });
 
 export const selectedCar = (car) => ({
-  type: ActionTypes.SELECTED_CAR,
+  type: SELECTED_CAR,
   payload: car,
 });
