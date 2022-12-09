@@ -5,4 +5,4 @@ const ActionTypes = {
   REMOVE_SELECTED_CAR: 'REMOVE_SELECTED_CAR',
 };
 
-export default ActionTypes
+export default ActionTypes;

@@ -5,4 +5,4 @@ const setReservations = (reservations) => ({
   payload: reservations,
 });
 
-export default setReservations
+export default setReservations;

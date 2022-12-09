@@ -13,4 +13,4 @@ const reservationReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export default reservationReducer
+export default reservationReducer;
