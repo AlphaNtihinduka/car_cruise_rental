@@ -1,4 +1,4 @@
-import { ActionTypes } from '../constants/actionTypes';
+import ActionTypes from "../constants/actionTypes";
 
 const setReservations = (reservations) => ({
   type: ActionTypes.SET_RESERVATIONS,
