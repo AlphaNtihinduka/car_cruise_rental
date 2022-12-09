@@ -15,7 +15,6 @@ class Api::V1::ReservationsController < ApplicationController
 
     if @reservation.save
       render json: @reservation, status: :created
-    elsif render json: { message: 'You are not an admin user' }
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
