@@ -4,7 +4,7 @@ const initialState = {
   reservations: [],
 };
 
-export const reservationReducer = (state = initialState, { type, payload }) => {
+const reservationReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_RESERVATIONS:
       return { ...state, reservations: payload };
@@ -12,3 +12,5 @@ export const reservationReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+
+export default reservationReducer

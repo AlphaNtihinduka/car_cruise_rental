@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .reservation {
-    box-shadow: rgba(18, 87, 1, 0.35) 0px 5px 15px;
-    padding: 1rem;
- }
+.reservation {
+  box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
+  padding: 1rem;
+}
