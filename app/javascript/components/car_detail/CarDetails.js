@@ -32,7 +32,7 @@ render(){
           {/* <img src={`${this.state.car.image}`} alt={`${this.state.car.name} `} /> */}  <img alt="car image" />
         </div>
       
-        <div className="cDetails_container">
+        <div className="cDetails_table">
           <h2>
             {/* {this.state.car.name} */}
             name

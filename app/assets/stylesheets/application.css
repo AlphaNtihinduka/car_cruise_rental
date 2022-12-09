@@ -17,7 +17,7 @@
   --text: #434b54;
   --blue: #3778c2;
   --green: #a2dc24;
-  --grey: grey;
+  --grey: rgba(143, 148, 157, 0.909);
   --red: #f21905;
   --white: aliceblue;
 }
@@ -31,18 +31,26 @@ a{
     display: flex;
     flex-direction: column;
     gap:5em;
+    margin-top: 5em;
+
  }
 
  .carInfor{
   display: flex;
   justify-content: space-between;
+  margin: 2em;
  }
 
  .cDtails_image{
   width: 65%;
  }
 
-
+.cDetails_table{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 35%;
+ }
 
  .inside_Arrows{
    display: flex;
@@ -56,7 +64,7 @@ a{
    color: var(--white);
    text-align: center;
    display: flex;
-   padding: 20px;
+   padding: 16px;
  }
 
  .rArrow_container , .lArrow_container{
@@ -85,9 +93,19 @@ a{
  }
 
  table, th, td {
-  border: 1px solid black;
+  text-align: left;
+  padding:10px;
   border-collapse: collapse;
 }
+
+table{
+font-size: 18px;
+} 
+
+tr:nth-child(odd) {
+  background-color:var(--grey);
+}
+
 
 .arrow{
   color: var(--white);
