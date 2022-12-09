@@ -23,9 +23,11 @@
 }
 
 .left-arrow {
-  border-radius: 50% solid rgb(8, 222, 26);
+  border-radius: 50%;
+  background-color: rgb(8, 222, 26);
 }
 
 .right-arrow {
-  border-radius: 50% solid rgb(8, 222, 26);
+  border-radius: 50%;
+  background-color: rgb(8, 222, 26);
 }
