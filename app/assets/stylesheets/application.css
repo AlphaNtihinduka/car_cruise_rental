@@ -20,6 +20,13 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  border-radius: 50%;
   background-color: rgb(8, 222, 26);
+}
+
+.left-arrow {
+  border-radius: 50%;
+}
+
+.right-arrow {
+  border-radius: 50%;
 }

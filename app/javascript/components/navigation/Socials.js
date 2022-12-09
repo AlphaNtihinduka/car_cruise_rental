@@ -13,8 +13,8 @@ const Socials = () => {
             <li><FaPinterest /></li>
            </ul>
          <div className="arrow">
-            <BiLeftArrow />
-            <BiRightArrow />
+            <div className="left-arrow"><BiLeftArrow /></div>
+            <div className="right-arrow"><BiRightArrow /></div>
          </div> 
         </div>
     )
