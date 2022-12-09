@@ -20,13 +20,12 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background-color: rgb(8, 222, 26);
 }
 
 .left-arrow {
-  border-radius: 50%;
+  border-radius: 50% solid rgb(8, 222, 26);
 }
 
 .right-arrow {
-  border-radius: 50%;
+  border-radius: 50% solid rgb(8, 222, 26);
 }
