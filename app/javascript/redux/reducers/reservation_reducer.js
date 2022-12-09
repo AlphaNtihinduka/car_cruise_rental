@@ -1,14 +1,14 @@
-import { ActionTypes } from "../constants/actionTypes"
+import { ActionTypes } from '../constants/actionTypes';
 
 const initialState = {
-    reservations: []
-}
+  reservations: [],
+};
 
-export const reservationReducer = (state = initialState, {type, payload}) => {
-    switch(type) {
-        case ActionTypes.SET_RESERVATIONS:
-            return {...state, reservations:payload}
-        default:
-            return state
-    }
-}
+export const reservationReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.SET_RESERVATIONS:
+      return { ...state, reservations: payload };
+    default:
+      return state;
+  }
+};

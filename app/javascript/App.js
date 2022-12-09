@@ -3,8 +3,8 @@ import { Route, Routes } from 'react-router';
 // import './App.css';
 import CarListing from './components/car_lists/CarListing';
 import CarDetails from './components/car_detail/CarDetail';
-import ReservationListing from './components/reservation/MyReservations';
-import "../assets/stylesheets/application.css";
+// import ReservationListing from './components/reservation/MyReservations';
+import '../assets/stylesheets/application.css';
 // import Navigation from './components/navigation/Navigation';
 
 function App() {
