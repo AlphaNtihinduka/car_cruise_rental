@@ -1,12 +1,14 @@
 // Entry point for the build script in your package.json
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App"
 
-function App() {
-  return (<h1>Hello World!</h1>);
-}
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root'),
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
 );

@@ -13,3 +13,83 @@
  *= require_tree .
  *= require_self
  */
+:root {
+  --text: #434b54;
+  --blue: #3778c2;
+  --green: #a2dc24;
+  --grey: grey;
+  --red: #f21905;
+  --white: aliceblue;
+}
+
+a{
+   text-decoration: none;
+   color: var(--white);
+}
+
+ .cDetails_container{
+    display: flex;
+    flex-direction: column;
+    gap:5em;
+ }
+
+ .carInfor{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .cDtails_image{
+  width: 65%;
+ }
+
+
+
+ .inside_Arrows{
+   display: flex;
+   gap:2em;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .btn{
+   background-color:var(--green) ;
+   color: var(--white);
+   text-align: center;
+   display: flex;
+   padding: 20px;
+ }
+
+ .rArrow_container , .lArrow_container{
+    display: flex;
+    height: 5.5vh;
+    width: 9%;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .lArrow_container{
+   border-radius: 0px 76px 76px 0px;
+ }
+
+ .rArrow_container{
+   border-radius: 76px 0px 0px 76px;
+ }
+
+ .dReserve_btn{
+    background-color: var(--green);
+    width: 19%;
+    font-size: 20px;
+    margin-left: 74%;
+    border-radius: 27% 10%;
+    border-radius: 58px 58px 58px 58px;
+ }
+
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.arrow{
+  color: var(--white);
+  font-size: 27px;
+}
