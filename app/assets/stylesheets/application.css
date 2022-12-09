@@ -23,9 +23,11 @@
 }
 
 .left-arrow {
-  border: 5px solid rgb(8, 222, 26);
+    border: 32px solid rgb(8, 222, 26);
+    border-radius: 33%;
 }
 
 .right-arrow {
-  border: 5px solid rgb(8, 222, 26);
+    border: 32px solid rgb(8, 222, 26);
+    border-radius: 33%;
 }
