@@ -1,20 +1,25 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import CarDetail from "./components/CarDetail";
-import CarListing from "./components/CarListing";
-import Navigation from "./components/Navigation";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
+import "../assets/stylesheets/application.css";
+import AddForm from "./components/navigation/AddForm";
+import Navigate from "./components/navigation/Navigate";
 
-function App() {
+
+
+const App = () => {
   return (
     <div className="App">
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<CarListing />} />
-        <Route path="/car/:car_id" element={<CarDetail />} />
-      </Routes>
+     <Router>
+         <Navigate />
+         <AddForm />
+        {/* <switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/api/v1/cars/new" component={AddForm} />
+        </switch> */}
+     </Router>
     </div>
   );
-}
+};
 
 export default App;
