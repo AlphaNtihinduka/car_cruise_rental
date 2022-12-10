@@ -1,8 +1,7 @@
 import React from 'react';
-import Socials from './Socials';
 
 const HomePage = () => {
-  const title = 'Car Rental';
+  const title = ' Car Rental ';
 
   return (
     <header className="navbar">
@@ -10,11 +9,9 @@ const HomePage = () => {
         <h1>
           Welcome! to
           {title}
-          {' '}
           HomePage
         </h1>
       </div>
-      <Socials />
     </header>
   );
 };
