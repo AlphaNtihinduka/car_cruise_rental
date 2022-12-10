@@ -1,8 +1,11 @@
-import ActionTypes from "../constants/actionTypes";
+import ActionTypes from '../constants/actionTypes';
 
-const setReservations = (reservations) => ({
+export const setReservations = (reservations) => ({
   type: ActionTypes.SET_RESERVATIONS,
   payload: reservations,
 });
 
-export default setReservations;
+export const selectedReservation = (reservation) => ({
+  type: ActionTypes.SELECTED_RESERVATION,
+  payload: reservation,
+});

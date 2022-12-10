@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { carReducer } from '../reducers/carReducer';
-import { reservationReducer } from '../reducers/reservation_reducer';
+import carReducer from '../reducers/carReducer';
+import reservationReducer from '../reducers/reservationReducer';
 
 const reducers = combineReducers({
   allcars: carReducer,

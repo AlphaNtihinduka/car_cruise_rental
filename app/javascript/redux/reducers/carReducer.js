@@ -4,7 +4,7 @@ const initialState = {
   cars: [],
 };
 
-export const carReducer = (state = initialState, { type, payload }) => {
+const carReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_CARS:
       return { ...state, cars: payload };
@@ -13,11 +13,4 @@ export const carReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export const selectedCarReducer = (state = {}, { type, payload }) => {
-  switch (type) {
-    case ActionTypes.SELECTED_CAR:
-      return { ...state, ...payload };
-    default:
-      return state;
-  }
-};
+export default carReducer;
