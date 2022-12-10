@@ -1,5 +1,3 @@
-export const ActionTypes = {
-  SET_CARS: "SET_CARS",
-  SELECTED_CAR: "SELECTED_CAR",
-  REMOVE_SELECTED_CAR: "REMOVE_SELECTED_CAR",
-};
+export const SET_CARS = 'SET_CARS';
+export const SELECTED_CAR = 'SELECTED_CAR';
+export const REMOVE_SELECTED_CAR = 'REMOVE_SELECTED_CAR';
