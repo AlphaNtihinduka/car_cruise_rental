@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import AddForm from "./components/navigation/AddForm";
@@ -6,6 +7,12 @@ import Navigation from "./components/navigation/Navigation";
 import "../assets/stylesheets/application.css";
 // import CarListing from "./components/car_lists/CarListing";
 // import CarDetails from "./components/car_detail/CarDetails";
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import CarDetail from './components/car_detail/CarDetail';
+import CarListing from './components/car_lists/CarListing';
+import Navigation from './components/navigation/Navigation';
+
 
 
 const App = () => {
