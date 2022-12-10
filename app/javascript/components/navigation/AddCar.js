@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddForm extends Component {
+class AddCar extends Component {
   constructor(props) {
     super(props);
    const state = {
@@ -41,4 +41,4 @@ class AddForm extends Component {
           );
         }
 }
-export default AddForm;
+export default AddCar;
