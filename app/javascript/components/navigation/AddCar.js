@@ -13,7 +13,7 @@ const AddCar = () => {
     car.price_per_day = pricePerDay;
     car.description = description;
     car.image = image;
-    // car.user_id = 2;
+    car.user_id = 2;
     // console.log(event.target.value);
 
     const response = await fetch('http://127.0.0.1:5000/api/v1/cars', {
