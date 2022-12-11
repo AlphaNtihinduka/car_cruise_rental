@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'f88be09c5216c3d0cd89b6c977712a73a3f9bd7e8133981bd0f653c8fe3772293aca1e4785d1fdc125af25825056cc27fe78e11aa97eb213122570602be57d8f'
+  # config.secret_key = '430b6ca4c14c583df83bccfc7ea325380c508d0aae90f76103a051c757f01630e652a2d7a4c238b9345da23150431893cb8c83a82b2d49d078a019a0777dcf5e'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '77b2a596de2692f3a803bb28a33a611776922db91ee7325b74df70d2bf1d3688d0f940e8c92b55271947d2f1bf3ad5b5b1277aba47be48d396f296056ff861d0'
+  # config.pepper = '6ba5b2e0240871caa3e3916752188866c978a3b9465e2f541132d353fe53f3fa7b184a42d365026eeefdf7b519b0423a9bfa6b86ded8f224614df79332c086a1'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -264,6 +264,7 @@ Devise.setup do |config|
   #
   # The "*/*" below is required to match Internet Explorer requests.
   # config.navigational_formats = ['*/*', :html]
+  config.navigational_formats = []
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
@@ -308,4 +309,16 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+
+  config.jwt do |jwt|
+    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+    jwt.dispatch_requests = [
+      ['POST', %r{^/login$}],
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/logout$}]
+    ]
+    jwt.expiration_time = 5.minutes.to_i
+  end
+  
 end
