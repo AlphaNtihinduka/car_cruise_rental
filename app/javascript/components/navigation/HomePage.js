@@ -6,13 +6,13 @@ const HomePage = () => {
 
   return (
     <header className="navbar">
-      {/* <div className="title">
-        <h1>
+      <div className="title">
+        {/* <h1>
           Welcome! to
           {title}
           HomePage
-        </h1>
-      </div> */}
+        </h1> */}
+      </div>
       <div>
         <Socials />
       </div>
