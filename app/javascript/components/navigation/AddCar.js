@@ -48,9 +48,9 @@ const AddCar = () => {
               <label htmlFor="car_image">Car Image</label>
               <input type="text" name="car_image" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
             </td>
-            {/* <div>
+            <div>
               <button onClick={handleSubmit} type="button">Submit</button>
-            </div> */}
+            </div>
           </tr>
         </tbody>
       </table>
