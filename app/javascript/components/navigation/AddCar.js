@@ -8,7 +8,7 @@ const AddCar = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // const car = {};
+    const car = {};
     // car.name = name;
     // car.price_per_day = pricePerDay;
     // car.description = description;
