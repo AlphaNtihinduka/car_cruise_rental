@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   
   def authorize_request
@@ -15,5 +15,4 @@ class ApplicationController < ActionController::API
       render json: { errors: 'Unauthorized user' }, status: :unauthorized
     end
   end
-  
 end
