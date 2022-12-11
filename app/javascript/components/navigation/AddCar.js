@@ -11,7 +11,7 @@ const AddCar = () => {
     const car = {};
     car.name = name;
     car.price_per_day = pricePerDay;
-    // car.description = description;
+    car.description = description;
     // car.image = image;
     // car.user_id = 2;
     // console.log(event.target.value);
