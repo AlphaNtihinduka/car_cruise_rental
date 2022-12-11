@@ -31,3 +31,14 @@
   border: 32px solid rgba(152, 181, 7, 0.89);
   border-radius: 33%;
 }
+
+.add-form-container {
+  background-color: red;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,6 +1,5 @@
 // Entry point for the build script in your package.json
-import React from 'react';
-import { StrictMode } from 'react';
+import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
@@ -11,4 +10,11 @@ root.render(
   <StrictMode>
     <App />
   </StrictMode>,
+  // <React.StrictMode>
+  // <Provider>
+  //   <BrowserRouter>
+  //     <App />
+  //   </BrowserRouter>
+  // </Provider>
+  // </React.StrictMode>,
 );
