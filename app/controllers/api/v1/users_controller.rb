@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authorize_request except: %i[index create]
+  before_action :authorize_request, except: %i[index create]
 
   def index
     @users = User.all
