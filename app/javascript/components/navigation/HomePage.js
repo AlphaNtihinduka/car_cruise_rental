@@ -12,10 +12,10 @@ const HomePage = () => {
           {title}
           HomePage
         </h1>
-      </div>
+      </div> */}
       <div>
         <Socials />
-      </div> */}
+      </div>
     </header>
   );
 };
