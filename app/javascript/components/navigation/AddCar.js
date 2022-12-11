@@ -33,20 +33,16 @@ const AddCar = () => {
         <tbody>
           <tr>
             <td>
-              <label htmlFor="username">name</label>
-              <input type="text" name="username" value={name} id="name" onChange={(event) => setname(event.target.value)} />
+              <input type="text" placeholder="name" value={name} id="name" onChange={(event) => setname(event.target.value)} />
             </td>
             <td>
-              <label htmlFor="price_per_day">Price Price per Day</label>
-              <input type="text" name="price_per_day" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
+              <input type="text" placeholder="price_per_day" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
             </td>
             <td>
-              <label htmlFor="car_description">Car Description</label>
-              <input type="text" name="car_description" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
+              <input type="text" placeholder="car_description" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
             </td>
             <td>
-              <label htmlFor="car_image">Car Image</label>
-              <input type="text" name="car_image" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
+              <input type="text" placeholder="car_image" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
             </td>
           </tr>
         </tbody>
