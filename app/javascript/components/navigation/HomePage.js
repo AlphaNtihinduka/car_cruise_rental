@@ -7,11 +7,11 @@ const HomePage = () => {
   return (
     <header className="navbar">
       <div className="title">
-        {/* <h1>
-          Welcome! to
+        <h1>
+          {/* Welcome! to
           {title}
-          HomePage
-        </h1> */}
+          HomePage */}
+        </h1>
       </div>
       <div>
         <Socials />
