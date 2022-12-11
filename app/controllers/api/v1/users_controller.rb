@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :authorize_request except: %i[index create]
+
   def index
     @users = User.all
     render json: @users
@@ -47,6 +49,6 @@ class Api::V1::UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :password)
   end
 end

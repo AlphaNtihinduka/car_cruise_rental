@@ -111,6 +111,7 @@ GEM
     json-schema (3.0.0)
       addressable (>= 2.8)
     jsonapi-renderer (0.2.2)
+    jwt (2.5.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -264,11 +265,13 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  bcrypt (~> 3.1.7)
   bootsnap
   debug
   devise
   jbuilder
   jsbundling-rails
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount Rswag::Api::Engine => '/api-docs'
  devise_for :users
 
+  post 'api/v1/auth/login', to: 'authentication#login'
   namespace :api do
     namespace :v1 do
        resources :cars do
