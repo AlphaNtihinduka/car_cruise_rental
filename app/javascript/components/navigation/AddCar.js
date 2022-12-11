@@ -29,10 +29,10 @@ const AddCar = () => {
   return (
     <div className="add-form">
       <h1>Add a New Rental Car</h1>
-      {/* <table>
+      <table>
         <tbody>
           <tr>
-            <td>
+            {/* <td>
               <label htmlFor="username">name</label>
               <input type="text" name="username" value={name} id="name" onChange={(event) => setname(event.target.value)} />
             </td>
@@ -50,10 +50,10 @@ const AddCar = () => {
             </td>
             <div>
               <button onClick={handleSubmit} type="button">Submit</button>
-            </div>
+            </div> */}
           </tr>
         </tbody>
-      </table> */}
+      </table>
 
     </div>
   );
