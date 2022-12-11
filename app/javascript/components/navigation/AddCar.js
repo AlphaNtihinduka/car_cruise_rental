@@ -32,11 +32,11 @@ const AddCar = () => {
       <table>
         <tbody>
           <tr>
-            {/* <td>
+            <td>
               <label htmlFor="username">name</label>
               <input type="text" name="username" value={name} id="name" onChange={(event) => setname(event.target.value)} />
             </td>
-            <td>
+            {/* <td>
               <label htmlFor="price_per_day">Price Price per Day</label>
               <input type="text" name="price_per_day" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
             </td>
