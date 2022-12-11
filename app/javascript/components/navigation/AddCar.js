@@ -36,10 +36,10 @@ const AddCar = () => {
               <label htmlFor="username">name</label>
               <input type="text" name="username" value={name} id="name" onChange={(event) => setname(event.target.value)} />
             </td>
-            {/* <td>
+            <td>
               <label htmlFor="price_per_day">Price Price per Day</label>
               <input type="text" name="price_per_day" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
-            </td>
+            {/* </td>
             <td>
               <label htmlFor="car_description">Car Description</label>
               <input type="text" name="car_description" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
