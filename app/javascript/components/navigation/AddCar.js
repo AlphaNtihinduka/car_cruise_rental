@@ -7,7 +7,7 @@ const AddCar = () => {
   const [image, setImage] = useState('');
 
   const handleSubmit = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     // const car = {};
     // car.name = name;
     // car.price_per_day = pricePerDay;
