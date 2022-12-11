@@ -51,9 +51,9 @@ const AddCar = () => {
           </tr>
         </tbody>
       </table>
-           <div>
-              <button onClick={handleSubmit} type="button">Submit</button>
-            </div>
+      <div>
+        <button onClick={handleSubmit} type="button">Submit</button>
+      </div>
     </div>
   );
 };
