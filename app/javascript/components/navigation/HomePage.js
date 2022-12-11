@@ -8,9 +8,9 @@ const HomePage = () => {
     <header className="navbar">
       <div className="title">
         <h1>
-          {/* Welcome! to
+          Welcome! to
           {title}
-          HomePage */}
+          HomePage
         </h1>
       </div>
       <div>
