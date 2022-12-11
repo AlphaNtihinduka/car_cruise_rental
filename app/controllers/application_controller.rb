@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::API
-
   def authorize_request
     header = request.headers['Authorization']
     if header
@@ -14,5 +13,4 @@ class ApplicationController < ActionController::API
       render json: { errors: 'Unauthorized user' }, status: :unauthorized
     end
   end
-  
 end
