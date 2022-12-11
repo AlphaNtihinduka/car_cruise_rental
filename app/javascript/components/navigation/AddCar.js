@@ -39,12 +39,12 @@ const AddCar = () => {
             <td>
               <label htmlFor="price_per_day">Price Price per Day</label>
               <input type="text" name="price_per_day" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
-            {/* </td>
+            </td>
             <td>
               <label htmlFor="car_description">Car Description</label>
               <input type="text" name="car_description" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
             </td>
-            <td>
+            {/* <td>
               <label htmlFor="car_image">Car Image</label>
               <input type="text" name="car_image" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
             </td>
