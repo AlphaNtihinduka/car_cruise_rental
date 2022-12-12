@@ -29,7 +29,7 @@ const AddCar = () => {
 
   return (
     <div className="add-form">
-      <h1>Add a New Rental Car</h1>
+      <h1>Add A New Rental Car</h1>
       <div className="container d-flex justify-content-center align-items-center">
         <div className="container d-grid justify-content-center align-items-center">
          <Table className="table d-flex grid-template-column-1fr 1fr">

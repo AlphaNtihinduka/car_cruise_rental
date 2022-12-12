@@ -3,7 +3,7 @@ import Socials from './Socials';
 import './styles.css';
 
 const HomePage = () => {
-  const title = ' Car Rental ';
+  const title = ' Car Cruise Rental ';
 
   return (
     <header className="navbar">
