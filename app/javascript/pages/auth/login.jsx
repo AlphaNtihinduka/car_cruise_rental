@@ -26,7 +26,7 @@ function Login() {
       console.log("LoggedIN", response);
       const userData = await response.json();
       localStorage.setItem("current_user", JSON.stringify(userData));
-      window.location.href = "/car";
+      window.location.href = "/";
     } else {
       console.log("error credentials");
     }
