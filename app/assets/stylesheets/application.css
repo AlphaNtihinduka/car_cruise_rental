@@ -14,6 +14,107 @@
  *= require_self
  */
 
+ /* car details */
+:root {
+  --text: #434b54;
+  --blue: #3778c2;
+  --green: #a2dc24;
+  --grey: rgba(143, 148, 157, 0.909);
+  --red: #f21905;
+  --white: aliceblue;
+}
+
+a{
+   text-decoration: none;
+}
+
+ .cDetails_container{
+    display: flex;
+    flex-direction: column;
+    gap:5em;
+    margin-top: 5em;
+
+ }
+
+ .carInfor{
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+ }
+
+ .cDtails_image{
+  width: 65%;
+ }
+
+.cDetails_table{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 35%;
+ }
+
+ .inside_Arrows{
+   display: flex;
+   gap:2em;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .btn{
+   background-color:var(--green) ;
+   color: var(--white);
+   text-align: center;
+   display: flex;
+   padding: 16px;
+ }
+
+ .rArrow_container , .lArrow_container{
+    display: flex;
+    height: 5.5vh;
+    width: 9%;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .lArrow_container{
+   border-radius: 0px 76px 76px 0px;
+ }
+
+ .rArrow_container{
+   border-radius: 76px 0px 0px 76px;
+ }
+
+ .dReserve_btn{
+    background-color: var(--green);
+    width: 19%;
+    font-size: 20px;
+    margin-left: 74%;
+    border-radius: 27% 10%;
+    border-radius: 58px 58px 58px 58px;
+ }
+
+ table, th, td {
+  text-align: left;
+  padding:10px;
+  border-collapse: collapse;
+}
+
+table{
+font-size: 18px;
+} 
+
+tr:nth-child(odd) {
+  background-color:var(--grey);
+}
+
+
+.arrow{
+  color: var(--white);
+  font-size: 27px;
+}
+
+ /* reservation */
+
 .reservation {
   box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
   padding: 1rem;
