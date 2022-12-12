@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { BiLeftArrow } from "react-icons/bi";
 import { BiRightArrow } from "react-icons/bi";
+import { imageUrl } from "@rails/assistants";
 
 // import "./assets/stylesheets/cardetails.css";
 // import axios from "axios";
@@ -28,7 +29,8 @@ class CarDetails extends Component {
         <div className="carInfor">
           <div className="cDetails_image">
             {/* <img src={`${this.state.car.image}`} alt={`${this.state.car.name} `} /> */}{" "}
-            <img alt="car image" />
+            <img />
+            <img src={imageUrl("Cruise-A.png")} alt="car image" />
           </div>
 
           <div className="cDetails_table">
