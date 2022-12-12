@@ -33,7 +33,7 @@
 }
 
 .add-form-container {
-  background-color: 152, 181, 7, 0.89;
+  background-color: rgba(152, 181, 7, 0.89);
 }
 
 .inputs {
@@ -41,7 +41,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-};
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
