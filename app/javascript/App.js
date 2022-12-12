@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 // import './App.css';
 import CarListing from './components/car_lists/CarListing';
 import CarDetails from './components/car_detail/CarDetail';
@@ -15,9 +15,9 @@ function App() {
       {/* <Navigation /> */}
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<Signup />}  />
-        <Route path="/car" element={<CarListing/>}/>
-        
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/car" element={<CarListing />} />
+
         {/* <Route path="/" element={<ReservationListing />} /> */}
         <Route path="/car/:car_id" element={<CarDetails />} />
       </Routes>
