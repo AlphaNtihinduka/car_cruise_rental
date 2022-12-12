@@ -4,6 +4,9 @@ import '../assets/stylesheets/application.css';
 import HomePage from './components/navigation/HomePage';
 import AddCar from './components/navigation/AddCar';
 import Navigate from './components/navigation/Navigate';
+import CarListing from './components/car_lists/CarListing';
+import CarDetails from './components/car_detail/CarDetail';
+import '../assets/stylesheets/application.css';
 
 const App = () => (
   <div className="App">
@@ -12,9 +15,10 @@ const App = () => (
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/addcar" element={<AddCar />} />
-      </Routes>
+        <Route exact path="/" element={<CarListing />} />
+        <Route exact path="/car/:car_id" element={<CarDetails />} />
+        </Routes>
     </Router>
-  </div>
+    </div>
 );
-
 export default App;
