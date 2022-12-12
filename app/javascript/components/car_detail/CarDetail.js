@@ -67,7 +67,7 @@ const CarDetails = () => {
       <div className="inside_Arrows">
         {car_id > 1 && (
           <Link
-            to={`/car/${parseInt(car_id) - 1}`}
+            to={`/car/${parseInt(car_id, 10) - 1}`}
             className="lArrow_container btn"
           >
             <div>
@@ -79,7 +79,7 @@ const CarDetails = () => {
         )}
         {car_id < largest_id && (
         <Link
-          to={`/car/${parseInt(car_id) + 1}`}
+          to={`/car/${parseInt(car_id, 10) + 1}`}
           className="rArrow_container btn"
         >
           <div>

@@ -25,6 +25,9 @@
     },
     "ignorePatterns": [
       "dist/",
-      "build/"
+      "build/",
+      "/app/javascript/application.js",
+      "/app/javascript/packs/",
+      "node_modules"
     ]
   }
