@@ -11,7 +11,9 @@ const CarComponent = () => {
     return (
       <div key={id}>
         <Link to={`/car/${id}`}>
-          <div className="image"><img src={image} alt="name" /></div>
+          <div className="image">
+            <img src={image} alt="name" />
+          </div>
           <h2>{name}</h2>
           <h4>{description}</h4>
         </Link>

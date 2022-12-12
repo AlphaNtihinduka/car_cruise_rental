@@ -9,12 +9,12 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
 
-.reservation {
-  box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
-  padding: 1rem;
+.App {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100vh;
 }
