@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
+import "./carDetails.css";
 
 import axios from 'axios';
 
