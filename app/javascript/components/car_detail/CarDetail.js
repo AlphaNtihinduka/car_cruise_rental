@@ -56,17 +56,19 @@ const CarDetails = () => {
       </div>
 
       <div className="inside_Arrows">
-        <Link
-          to={`/car/${parseInt(car_id) - 1}`}
-          className="lArrow_container btn"
-        >
-          <div>
-            <span className="arrow">
-              <BiLeftArrow />
-            </span>
-          </div>
-        </Link>
-
+        {car_id > 1 && (
+          <Link
+            to={`/car/${parseInt(car_id) - 1}`}
+            className="lArrow_container btn"
+          >
+            <div>
+              <span className="arrow">
+                <BiLeftArrow />
+              </span>
+            </div>
+          </Link>
+        )}
+        
         <Link
           to={`/car/${parseInt(car_id) + 1}`}
           className="rArrow_container btn"
