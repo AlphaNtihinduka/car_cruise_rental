@@ -1,92 +1,87 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BiLeftArrow } from "react-icons/bi";
 import { BiRightArrow } from "react-icons/bi";
-import { imageUrl } from "@rails/assistants";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
-// import "./assets/stylesheets/cardetails.css";
-// import axios from "axios";
+const CarDetails = () => {
+  let { car_id } = useParams();
+  const [car, setCar] = useState(null);
 
-// const logo = require("C:UsersUserDesktop\finalcar_cruise_rentalappjavascriptcomponentscar_detailimagesCruise-A.png");
-class CarDetails extends Component {
-  // state ={
-  //     car: null
-  // }
-  // componentDidMount(){
-  //     let id = this.props.match.params.car_id;
-  //     axios.get('http://127.0.0.1:5000/api/v1/cars/' + car.id)
-  //     .then(response => {
-  //       this.setState({
-  //         car: response.data
-  //       })
-  //     })
-  // }
-  render() {
+  useEffect(() => {
+    axios.get(`http://127.0.0.1:5000/api/v1/cars/${car_id}`)
+      .then(response => {
+        setCar(response.data);
+      });
+  }, []);
+
+  if (!car) {
     return (
-      <div className="cDetails_container">
-        {/* Link helps to avoid sending a request to server again and again, NAVLINK GIVES THE ACTIVE ATTRIBUTE AND HELPS WITH STYLING */}
+      <div>Loading...</div>
+    );
+  }
 
-        <div className="carInfor">
-          <div className="cDetails_image">
-            {/* <img src={`${this.state.car.image}`} alt={`${this.state.car.name} `} /> */}{" "}
-            <img />
-            <img src={imageUrl("Cruise-A.png")} alt="car image" />
-          </div>
-
-          <div className="cDetails_table">
-            <h2>
-              {/* {this.state.car.name} */}
-              name
-            </h2>
-
-            <table className="dTable">
-              <tbody>
-                <tr>
-                  <th>Model</th>
-                  <td>
-                    {/* {this.state.car.name} */}
-                    name
-                  </td>
-                </tr>
-                <tr>
-                  <th>Description</th>
-                  <td>{/* {this.state.car.description} */}</td>
-                </tr>
-                <tr>
-                  <th>Price per day</th>
-                  <td>{/* {this.state.car.price_per_day} */}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  return (
+    <div className="cDetails_container">
+      <div className="carInfor">
+        <div className="cDetails_image">
+          <img className="dcar_image" src={car.image} alt={car.name} />
         </div>
 
-        <div className="inside_Arrows">
-          <div className="lArrow_container btn">
-            <Link to="/cars">
-              <span className="arrow">
-                <BiLeftArrow />
-              </span>
-            </Link>
+        <div className="cDetails_table">
+          <div className="mainName_cont">
+            <h2 className="mainName">{car.name}</h2>
+            <p className="mainName">
+              - 50% Deposit needed a day before pickdate!
+            </p>
           </div>
 
-          <div className="rArrow_container btn">
-            <Link to="/cars">
-              <span className="arrow">
-                <BiRightArrow />
-              </span>
-            </Link>
-          </div>
+          <table className="dTable">
+            <tbody>
+              <tr>
+                <th>Model:</th>
+                <td>{car.name}</td>
+              </tr>
+              <tr>
+                <th>Description:</th>
+                <td>{car.description}</td>
+              </tr>
+              <tr>
+                <th>Price per day:</th>
+                <td>$ {car.price_per_day}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="inside_Arrows">
+        <div className="lArrow_container btn">
+          <Link to="/cars">
+            <span className="arrow">
+              <BiLeftArrow />
+            </span>
+          </Link>
         </div>
 
-        <div className="dReserve_btn btn">
-          <Link to="/reservations" className="">
-            Reserve this Car
+        <div className="rArrow_container btn">
+          <Link to="/cars">
+            <span className="arrow">
+              <BiRightArrow />
+            </span>
           </Link>
         </div>
       </div>
-    );
-  }
-}
 
-module.exports = CarDetails;
+      <div className="dReserve_btn btn">
+        <Link to="/reservations" className="linkReserve">
+          Reserve this Car
+        </Link>
+      </div>
+    </div>
+  );
+  };
+
+
+export default CarDetails;
