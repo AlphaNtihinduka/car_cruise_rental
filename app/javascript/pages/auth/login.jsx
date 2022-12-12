@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import './login.css'
 
 
 function Login() {
@@ -32,7 +33,7 @@ function Login() {
   };
 
   return (
-    <div className="">
+    <div className="container">
       <form className="" method="POST" onSubmit={sendForm()}>
         <h2>LOGIN</h2>
 
