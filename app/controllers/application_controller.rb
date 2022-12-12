@@ -1,4 +1,6 @@
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :null_session
+  
   def authorize_request
     header = request.headers['Authorization']
     if header
