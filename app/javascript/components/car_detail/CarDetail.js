@@ -8,14 +8,20 @@ import { useParams } from "react-router-dom";
 const CarDetails = () => {
   let { car_id } = useParams();
   const [car, setCar] = useState(null);
-  const largest_id = Math.max(...car.map((car) => car.id));
+  const [largest_id, setLargestId] = useState(0);
 
   useEffect(() => {
     axios
       .get(`http://127.0.0.1:5000/api/v1/cars/${car_id}`)
       .then((response) => {
         setCar(response.data);
-      });
+        });
+
+    axios.get(`http://127.0.0.1:5000/api/v1/cars`).then((response) => {
+      const cars = response.data;
+      const largest_id = cars.reduce((acc, cur) => Math.max(acc, cur.id), 0);
+      setLargestId(largest_id);
+    });
   }, [car_id]); // Only run the effect when the car ID changes
 
   if (!car) {
