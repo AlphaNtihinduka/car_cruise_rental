@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  FaTwitter, FaFacebook, FaGlide, FaVimeo, FaPinterest,
-} from 'react-icons/fa';
+          FaTwitter, FaFacebook, FaGlide, FaVimeo, FaPinterest,
+       } from 'react-icons/fa';
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
+import './styles.css';
 
 const Socials = () => (
   <div>

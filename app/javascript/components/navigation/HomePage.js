@@ -1,5 +1,6 @@
 import React from 'react';
 import Socials from './Socials';
+import './styles.css';
 
 const HomePage = () => {
   const title = ' Car Rental ';
