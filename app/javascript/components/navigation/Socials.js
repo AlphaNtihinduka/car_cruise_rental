@@ -14,7 +14,7 @@ const Socials = () => (
       <li><FaVimeo /></li>
       <li><FaPinterest /></li>
     </ul>
-    <div className="arrow">
+    <div className="addcar-arrow">
       <div className="left-arrow"><BiLeftArrow /></div>
       <div className="right-arrow"><BiRightArrow /></div>
     </div>
