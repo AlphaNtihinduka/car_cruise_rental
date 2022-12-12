@@ -4,13 +4,16 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.1",
+    "bootstrap": "^5.2.3",
     "combine-reducers": "^1.0.0",
     "react": "^18.1.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router": "^6.4.4",
-    "react-router-dom": "^6.4.5"
+    "react-router-dom": "^6.4.5",
+    "webpack": "^5.75.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx"
