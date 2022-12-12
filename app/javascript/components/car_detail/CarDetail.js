@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { BiLeftArrow } from "react-icons/bi";
-import { BiRightArrow } from "react-icons/bi";
-import axios from "axios";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
+
+import axios from 'axios';
 
 const CarDetails = () => {
-  let { car_id } = useParams();
+  const { car_id } = useParams();
   const [car, setCar] = useState(null);
   const [largest_id, setLargestId] = useState(0);
 
@@ -15,9 +14,9 @@ const CarDetails = () => {
       .get(`http://127.0.0.1:5000/api/v1/cars/${car_id}`)
       .then((response) => {
         setCar(response.data);
-        });
+      });
 
-    axios.get(`http://127.0.0.1:5000/api/v1/cars`).then((response) => {
+    axios.get('http://127.0.0.1:5000/api/v1/cars').then((response) => {
       const cars = response.data;
       const largest_id = cars.reduce((acc, cur) => Math.max(acc, cur.id), 0);
       setLargestId(largest_id);
@@ -55,7 +54,10 @@ const CarDetails = () => {
               </tr>
               <tr>
                 <th>Price per day:</th>
-                <td>$ {car.price_per_day}</td>
+                <td>
+                  $
+                  {car.price_per_day}
+                </td>
               </tr>
             </tbody>
           </table>
@@ -75,7 +77,7 @@ const CarDetails = () => {
             </div>
           </Link>
         )}
-      {car_id < largest_id && (
+        {car_id < largest_id && (
         <Link
           to={`/car/${parseInt(car_id) + 1}`}
           className="rArrow_container btn"
@@ -86,7 +88,7 @@ const CarDetails = () => {
             </span>
           </div>
         </Link>
-      )}
+        )}
       </div>
 
       <div className="dReserve_btn btn">
@@ -97,6 +99,5 @@ const CarDetails = () => {
     </div>
   );
 };
-
 
 export default CarDetails;
