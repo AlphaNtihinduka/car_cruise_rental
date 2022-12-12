@@ -19,7 +19,7 @@
   --text: #434b54;
   --blue: #3778c2;
   --green: #a2dc24;
-  --grey: rgba(143, 148, 157, 0.909);
+  --grey: rgba(219, 221, 224, 0.79);
   --red: #f21905;
   --white: aliceblue;
 }
@@ -28,29 +28,45 @@ a{
    text-decoration: none;
 }
 
+.App{
+  display: grid;   
+  grid-template-columns: 1fr 5fr;
+  height: 100vh;
+}
+
  .cDetails_container{
     display: flex;
     flex-direction: column;
     gap:5em;
-    margin-top: 5em;
-
+    border: 2px solid black;
+    margin-bottom: 5em;
  }
 
  .carInfor{
   display: flex;
   justify-content: space-between;
-  margin: 2em;
+  gap:2em;
+  }
+
+.cDetails_image {
+   width: 70%;
  }
 
- .cDtails_image{
-  width: 65%;
+ .dcar_image{
+      width: 754px;
  }
 
-.cDetails_table{
+ .mainName{
+  text-align: right;
+ }
+
+ .cDetails_table{
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    width: 35%;
+    gap: 1em;
+    width: 30%;
+    margin-top: 3em;
+   
  }
 
  .inside_Arrows{
@@ -95,13 +111,17 @@ a{
 
  table, th, td {
   text-align: left;
-  padding:10px;
+      padding: 10px 5px;
   border-collapse: collapse;
 }
 
 table{
-font-size: 18px;
+font-size: 14px;
 } 
+
+th{
+  width:35%;
+}
 
 tr:nth-child(odd) {
   background-color:var(--grey);
@@ -118,4 +138,8 @@ tr:nth-child(odd) {
 .reservation {
   box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
   padding: 1rem;
+}
+
+.linkReserve{
+  color: var(--white);
 }
