@@ -47,10 +47,7 @@ a {
 }
 
 .inside_Arrows {
-  display: flex;
-  gap: 2em;
-  justify-content: space-between;
-  align-items: center;
+ margin-top: 2px;
 }
 
 .btn {
@@ -72,10 +69,12 @@ a {
 
 .lArrow_container {
   border-radius: 0 76px 76px 0;
+  float:left;
 }
 
 .rArrow_container {
   border-radius: 76px 0 0 76px;
+  float:right;
 }
 
 .dReserve_btn {
@@ -110,4 +109,26 @@ tr:nth-child(odd) {
 .arrow {
   color: var(--white);
   font-size: 27px;
+}
+
+/* mobile version */
+
+@media screen and (max-width: 600px) {
+.App {
+    display: flex;
+    flex-direction: column;
+}
+.carInfor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cDetails_image {
+    width: 100%;
+}
+
+.dcar_image {
+    width: 195px;
+}
 }
