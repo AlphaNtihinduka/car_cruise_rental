@@ -10,16 +10,15 @@ const CarDetails = () => {
   const [car, setCar] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/api/v1/cars/${car_id}`)
-      .then(response => {
+    axios
+      .get(`http://127.0.0.1:5000/api/v1/cars/${car_id}`)
+      .then((response) => {
         setCar(response.data);
       });
-  }, []);
+  }, [car_id]); // Only run the effect when the car ID changes
 
   if (!car) {
-    return (
-      <div>Loading...</div>
-    );
+    return <div>Loading...</div>;
   }
 
   return (
@@ -57,21 +56,27 @@ const CarDetails = () => {
       </div>
 
       <div className="inside_Arrows">
-        <div className="lArrow_container btn">
-          <Link to="/cars">
+        <Link
+          to={`/car/${parseInt(car_id) - 1}`}
+          className="lArrow_container btn"
+        >
+          <div>
             <span className="arrow">
               <BiLeftArrow />
             </span>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
-        <div className="rArrow_container btn">
-          <Link to="/cars">
+        <Link
+          to={`/car/${parseInt(car_id) + 1}`}
+          className="rArrow_container btn"
+        >
+          <div>
             <span className="arrow">
               <BiRightArrow />
             </span>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
 
       <div className="dReserve_btn btn">
@@ -81,7 +86,7 @@ const CarDetails = () => {
       </div>
     </div>
   );
-  };
+};
 
 
 export default CarDetails;
