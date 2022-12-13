@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
-import Table from 'react-bootstrap/Table';
+import Select from 'react-select';
 import './styles.css';
+
+const options = [
+  { value: '/assets/audi.png', label: 'Audi' },
+  { value: '/assets/blackcar.png', label: 'Black Car' },
+  { value: '/assets/chevroelt.png', label: 'Chevrolet' },
+  { value: '/assets/ferrari.png', label: 'Ferrari' },
+  { value: '/assets/ford.png', label: 'Ford' }
+];
 
 const AddCar = () => {
   const [name, setname] = useState('');
@@ -8,6 +16,11 @@ const AddCar = () => {
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
   const [user, setUser] = useState('');
+
+  const handleSelectChange = (selectedOption) => {
+    setImage(selectedOption.value);
+  };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,6 +30,7 @@ const AddCar = () => {
     car.description = description;
     car.image = image;
     car.user_id = user;
+    
 
 
     const response = await fetch('http://127.0.0.1:5000/api/v1/cars', {
@@ -33,8 +47,25 @@ const AddCar = () => {
     <div className="add-form">
       <h1>Add A New Rental Car</h1>
       <div className="container d-flex justify-content-center align-items-center">
+        <form>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input type="text" value={name} id="name" onChange={(event) => setname(event.target.value)} />
+            <label htmlFor="user_id">User ID</label>
+            <input type="text" value={user} id="user_id" onChange={(event) => setUser(event.target.value)} />
+            <label htmlFor="price_per_day">Price Per Day</label>
+            <input type="text" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
+            <label htmlFor="description">Description</label>
+            <input type="text" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
+            {/* <input type="text" value={image} id="image" onChange={(event) => setImage(event.target.value)} /> */}
+            <Select options={options} onChange={handleSelectChange} />
+            <div>
+                <button onClick={handleSubmit} type="button">Submit</button>
+            </div>
+           </div>
+        </form>
         <div className="container d-grid justify-content-center align-items-center">
-          <Table className="table d-flex grid-template-column-1fr 1fr">
+          {/* <Table className="table d-flex grid-template-column-1fr 1fr">
             <thead>
               <tr>
                 <th>Name</th>
@@ -59,20 +90,17 @@ const AddCar = () => {
                   <input type="text" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
                 </td>
                 <td>
-                <select image src="./image">
+                <select>
                <input type="text" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
-                  <option>
+                  <option >
                     Select Image
                  </option>
           </select>
                 </td>
               </tr>
             </tbody>
-          </Table>
+          </Table> */}
         </div>
-      </div>
-      <div>
-        <button onClick={handleSubmit} type="button">Submit</button>
       </div>
     </div>
   );
