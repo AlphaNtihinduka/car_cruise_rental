@@ -6,6 +6,7 @@ import AddCar from './components/navigation/AddCar';
 import Navigate from './components/navigation/Navigate';
 import CarListing from './components/car_lists/CarListing';
 import CarDetails from './components/car_detail/CarDetail';
+import DeleteCar from './components/navigation/DeleteCar';
 
 const App = () => (
   <div className="App">
@@ -16,6 +17,7 @@ const App = () => (
         <Route exact path="/addcar" element={<AddCar />} />
         <Route exact path="/" element={<CarListing />} />
         <Route exact path="/car/:car_id" element={<CarDetails />} />
+        <Route exact path="delete/:car_id" element={<DeleteCar />} />
       </Routes>
     </Router>
   </div>
