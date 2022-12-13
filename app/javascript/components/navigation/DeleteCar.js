@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setCars } from '../../redux/carActions/carActions';
 
 
@@ -12,20 +12,15 @@ const DeleteCar = () => {
         .catch((err) => err);
       dispatch(setCars(response.data));
     };
-    const cars = useSelector((state) => state.allcars.cars);
-    const carRender = cars.map((car) => {
-      const {
-        id, name, image, description,
-      } = car;
-    });
+    
 
     const handleDelete = async (id) => {
       const response = await axios
-        .delete(`http://127.0.0.1:5000/api/v1/cars`, { id })
+        .delete(`http://127.0.0.1:5000/api/v1/cars/${id}`)
     };
 
     useEffect(() => {
-      fetchdata();
+      fetchdata()
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
@@ -37,7 +32,7 @@ const DeleteCar = () => {
           </div>
           <h2>{name}</h2>
           <h4>{description}</h4>
-          <button type="button" onClick={() => DeleteCar(id)}>Delete</button>
+          <button type="button" onClick={() => handleDelete(id)}>Delete</button>
         </Link>
       </div>
       </>

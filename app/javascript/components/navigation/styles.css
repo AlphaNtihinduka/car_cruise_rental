@@ -14,6 +14,55 @@
   justify-content: space-between;
   padding: 10px;
 }
+h1  {
+  color: aliceblue;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  border: 2px solid black;
+  margin-bottom: 5em;
+  background-color: #a2dc24;
+}
+
+.main-form {
+  margin: 1em;
+  padding: 1em;
+}
+
+.add-form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.form-image {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  gap: 4em;
+}
+
+.nform, .pform, .iform, .dform {
+  display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-bottom: 1em;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.btn-form {
+  width: 39%;
+  height: 33px;
+  border-radius: 10px;
+  margin-left: 98px;
+}
 
 .left-arrow {
   border: 32px solid rgba(152, 181, 7, 0.89);
@@ -27,17 +76,6 @@
 
 .add-form-container {
   background-color: rgba(152, 181, 7, 0.89);
-}
-
-.form-container {
-  display: flex;
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .reservation {
