@@ -7,6 +7,7 @@ const AddCar = () => {
   const [pricePerDay, setPricePerDay] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
+  const [user, setUser] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,7 +16,8 @@ const AddCar = () => {
     car.price_per_day = pricePerDay;
     car.description = description;
     car.image = image;
-    car.user_id = 2;
+    car.user_id = user;
+
 
     const response = await fetch('http://127.0.0.1:5000/api/v1/cars', {
       method: 'POST',
@@ -36,6 +38,7 @@ const AddCar = () => {
             <thead>
               <tr>
                 <th>Name</th>
+                <th>User ID</th>
                 <th>Price Per Day</th>
                 <th>Description</th>
                 <th>Image</th>
@@ -47,13 +50,21 @@ const AddCar = () => {
                   <input type="text" value={name} id="name" onChange={(event) => setname(event.target.value)} />
                 </td>
                 <td>
+                  <input type="text" value={user} id="user_id" onChange={(event) => setUser(event.target.value)} />
+                </td>
+                <td>
                   <input type="text" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
                 </td>
                 <td>
                   <input type="text" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
                 </td>
                 <td>
-                  <input type="text" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
+                <select image src="./image">
+               <input type="text" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
+                  <option>
+                    Select Image
+                 </option>
+          </select>
                 </td>
               </tr>
             </tbody>
