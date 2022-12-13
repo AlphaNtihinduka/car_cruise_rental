@@ -9,13 +9,15 @@ const CarComponent = () => {
       id, name, image, description,
     } = car;
     return (
-      <div key={id}>
+      <div key={id} className="car_container">
         <Link to={`/car/${id}`}>
-          <div className="image">
-            <img src={image} alt="name" />
+          <div className='car_card'>
+              <div className="image">
+                <img src={image} alt="name" />
+              </div>
+              <h4>{name}</h4>
+              <p>{description}</p>
           </div>
-          <h2>{name}</h2>
-          <h4>{description}</h4>
         </Link>
       </div>
     );

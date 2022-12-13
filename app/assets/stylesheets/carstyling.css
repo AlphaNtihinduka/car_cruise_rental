@@ -1,0 +1,33 @@
+.colors {
+   background-color: #99c210; 
+   color: rgba(153,194,16,255);
+}
+
+.colors {
+    background-color: #ffc600; 
+    color: rgba(255,198,0,255);
+ }
+
+.all_cars_container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 50%);
+    padding: 1rem;
+}
+
+.car_card {
+    box-shadow: 16px 22px 31px -10px rgba(0,0,0,0.7) inset;
+    -webkit-box-shadow: 16px 22px 31px -10px rgba(0,0,0,0.7) inset;
+    -moz-box-shadow: 16px 22px 31px -10px rgba(0,0,0,0.7) inset;
+    border: 0.02rem solid #99c210;
+    min-height: 27rem;
+     display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.image img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}

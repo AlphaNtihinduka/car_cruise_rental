@@ -1,3 +1,5 @@
+@import "carstyling.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,12 @@
   list-style: none;
 }
 
-.App {
+/* .App {
   display: grid;
   grid-template-columns: 1fr 5fr;
   height: 100vh;
-}
+} */
+
+/* .all_cars {
+  background-color: green;
+} */
