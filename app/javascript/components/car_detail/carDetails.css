@@ -1,4 +1,5 @@
 /* car details */
+
 :root {
   --text: #434b54;
   --blue: #3778c2;
@@ -10,6 +11,7 @@
 
 a {
   text-decoration: none;
+  
 }
 
 .cDetails_container {
@@ -78,12 +80,20 @@ a {
 }
 
 .dReserve_btn {
+  display: flex;
+  flex-direction: column;
   background-color: var(--green);
   width: 19%;
-  font-size: 20px;
+  font-size: 24px;
   margin-left: 74%;
-  border-radius: 27% 10%;
   border-radius: 58px 58px 58px 58px;
+}
+
+.linkReserve
+    {
+    color: var(--white);
+    text-align: center;
+    font-style: bold;
 }
 
 table,
@@ -113,11 +123,16 @@ tr:nth-child(odd) {
 
 /* mobile version */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 .App {
-    display: flex;
     flex-direction: column;
 }
+
+.cDetails_container {
+    border:none;
+    margin-bottom: 4em;
+}
+
 .carInfor {
     display: flex;
     flex-direction: column;
@@ -125,10 +140,27 @@ tr:nth-child(odd) {
 }
 
 .cDetails_image {
-    width: 100%;
+    width: 50%;
 }
 
 .dcar_image {
-    width: 195px;
+    width: 335px;
+}
+
+.cDetails_table {
+    width: 98%;
+    margin-top: 0em;
+}
+
+.dReserve_btn {
+    display: flex;
+    width: 61%;
+    margin: 0 auto;
+    font-size: 24px;
+    flex-direction: column;
+}
+
+.App {
+    grid-template-columns: 1fr;
 }
 }
