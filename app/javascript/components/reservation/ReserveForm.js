@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
+import Select from "react-select";
+import { ToastContainer, toast } from 'react-toastify';
 
 const AddReservation = () => {
   // Initialize state for car data
@@ -10,9 +12,9 @@ const AddReservation = () => {
   const [pickDate, setPickDate] = useState("");
   const [user_id, setUserId] = useState("");
   const {car_id } = useParams();
- const [carId, setCarId] = useState("");
+  const [carId, setCarId] = useState("");
   // const [car, setCar] = useState();
-
+ 
   // Initialize state for car data
 
   useEffect(() => {
@@ -26,10 +28,22 @@ const AddReservation = () => {
       setAllCars(responses.data);
       const car = allCars.find((car) => car.id === car_id);
     };
-
     // Call `manageCars` function to fetch data
     manageCars();
   }, []);
+
+  console.log(allCars);
+  
+
+   const options = [];
+   allCars.filter((car) => {
+     const obj = {};
+     obj.value = car.id;
+     obj.label = car.name;
+     options.push(obj);
+   });
+
+   console.log(options);
   // Empty array means this effect will only run once when the component mounts
 const handleSubmit = async () => {
   try {
@@ -41,6 +55,7 @@ const handleSubmit = async () => {
       pick_date: pickDate,
     };
 
+
     // Make a POST request to add the reservation
     const response = await axios.post(
       `http://127.0.0.1:5000/api/v1/cars/${car_id}/reservations`,
@@ -48,20 +63,28 @@ const handleSubmit = async () => {
     );
 
     // Handle success or failure
-    if (response.status === 200) {
+    if (response.status === 201) {
       // Success, show a message and reset the form
-      alert("Reservation added successfully!");
+      toast.success("Reservation added successfully!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
       setCarId("");
       setUserId("");
       setDays("");
       setPickDate("");
     } else {
       // Failure, show an error message
-      alert("Error adding reservation: " + response.data.message);
+      toast.error("Error adding reservation: " + response , {
+        position: toast.POSITION.TOP_CENTER,
+      });
+
+
     }
   } catch (error) {
     // Handle network errors
-    alert("Error adding reservation: " + error.message);
+    toast.error("Error adding reservation: " + error, {
+      position: toast.POSITION.TOP_CENTER,
+    });
   }
 };
 
@@ -88,27 +111,9 @@ const handleSubmit = async () => {
       />
       <br />
 
-      {/* <select onChange={(event) => setCarId(event.target.value)}>
-        <option>Select the car</option>
-        {allCars.map((car) => (
-          <option key={car.id} value={car.id}>
-            {car.name}
-          </option>
-        ))}
-      </select> */}
+      
+     <Select options ={options} onChange={(event) => setCarId(event.value)} />
 
-      <select type="number">
-        <option>Select the car</option>
-        {allCars.map((car) => (
-          <option
-            key={car.id}
-            value={car.id}
-            onChange={(event) => setCarId(event.target.value)}
-          >
-            {car.name}
-          </option>
-        ))}
-      </select>
       <br />
       <input
         placeholder="user id"
@@ -123,6 +128,7 @@ const handleSubmit = async () => {
           Submit
         </button>
       </div>
+      <ToastContainer />
     </div>
   );
 };
