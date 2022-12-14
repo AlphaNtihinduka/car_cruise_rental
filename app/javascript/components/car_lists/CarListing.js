@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import CarComponent from './CarComponent';
 import { setCars } from '../../redux/carActions/carActions';
 
 const CarListing = () => {
   const cars = useSelector((state) => state.allcars.cars);
-  console.log("cars: ",cars)
+
   const dispatch = useDispatch();
   const fetchdata = async () => {
     const response = await axios
@@ -19,6 +19,7 @@ const CarListing = () => {
   useEffect(() => {
     fetchdata();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   
   return (
     <>
