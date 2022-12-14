@@ -13,13 +13,9 @@ class Api::V1::UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = user.new(user_params)
-
-    if current_user.role == 'admin'
-      @user.save
+    @user = User.new(user_params)
+     if @user.save
       render json: @user, status: :created
-    elsif current_user.role != 'admin'
-      render json: { message: 'You are not an admin user' }
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -49,6 +45,6 @@ class Api::V1::UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:name, :password)
+    params.permit(:name, :email, :password)
   end
 end

@@ -19,13 +19,14 @@ function Signup() {
       }),
     };
     const response = await fetch(
-      'http://127.0.0.1:5000/users/sign_up',
+      'http://127.0.0.1:5000/api/v1/users',
       dataform,
     );
     if (response.ok) {
       const userData = await response.json();
+      localStorage.setItem('saved', JSON.stringify(userData));
       console.log('User Registered', userData);
-      window.location.href = '/car';
+      window.location.href = '/';
     } else {
       console.log('Error Registering', response);
     }
