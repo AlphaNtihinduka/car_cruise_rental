@@ -12,6 +12,12 @@
     
 }
 
+.car_card:hover {
+    background-color: #99c210;
+    transition: all 0.4s ease;
+    transform: perspective(300px) translate3d(10px, 0, 0px);
+}
+
 .car_container {
     width: 45%;
     
