@@ -1,17 +1,15 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import './login.css'
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './auth.css';
 
 function Login() {
   const [Username, setUsername] = useState();
   const [Password, setPassword] = useState();
- 
+
   const sendForm = async () => {
     const dataform = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: Username,
         password: Password,
@@ -19,27 +17,28 @@ function Login() {
     };
 
     const response = await fetch(
-      "http://127.0.0.1:5000/api/v1/auth/login",
-      dataform
+      'http://127.0.0.1:5000/api/v1/auth/login',
+      dataform,
     );
     if (response.ok) {
-      console.log("LoggedIN", response);
+      console.log('LoggedIN', response);
       const userData = await response.json();
-      localStorage.setItem("current_user", JSON.stringify(userData));
-      window.location.href = "/";
+      localStorage.setItem('current_user', JSON.stringify(userData));
+        <Link to="/signup" />;
+        window.location.href = '/car';
     } else {
-      console.log("error credentials");
+      console.log('error credentials');
     }
   };
 
   return (
     <div className="container">
-      <form className="" method="POST" onSubmit={sendForm()}>
+      <form className="container-form" method="POST" onSubmit={sendForm()}>
         <h2>LOGIN</h2>
 
-        <div className="">
+        <div className="form-input">
           <input
-            onChange={async (e)=>{
+            onChange={async (e) => {
               setUsername(e.target.value);
               e.preventDefault();
             }}
@@ -52,10 +51,9 @@ function Login() {
           />
         </div>
 
-        <div className="">
+        <div className="form-input">
           <input
-            
-            onChange={async (e)=>{
+            onChange={async (e) => {
               setPassword(e.target.value);
               e.preventDefault();
             }}
@@ -68,13 +66,13 @@ function Login() {
           />
         </div>
 
-        <p className="">
+        <p className="form-signup">
           Don&apos;t have an account yet?
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/signup" className="signup">Sign Up</Link>
         </p>
 
         <div className="">
-          <button type="submit" className="">
+          <button type="submit" className="form-button">
             Login
           </button>
         </div>
