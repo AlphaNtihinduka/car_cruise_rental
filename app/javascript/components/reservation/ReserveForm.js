@@ -114,7 +114,6 @@ const handleSubmit = async () => {
     //   />
     //   <br />
 
-      
     //  <Select options ={options} onChange={(event) => setCarId(event.value)} />
 
     //   <br />
@@ -134,42 +133,63 @@ const handleSubmit = async () => {
     //   <ToastContainer />
     // </div>
 
-
-<div className="form-container">
-    <div className="add-form">
-      <h1>Add A New reservation</h1>
-      <div className="container d-flex justify-content-center align-items-center">
-        <form className='main-form'>
-          <div className="form-group">
-            <div className="nform">
+    <div className="form-container">
+      <div className="add-form">
+        <h1>Add A New Reservation</h1>
+        <div className="container d-flex justify-content-center align-items-center inner-form">
+          <form className="main-form">
+            <div className="form-group">
+              <div className="form-name">
+                <label htmlFor="name">Choose car name</label>
+                <Select className='select'
+                  options={options}
+                  onChange={(event) => setCarId(event.value)}
+                />
+              </div>
+              <div className="nform">
                 <label htmlFor="days">Enter number of days you need car</label>
-             <input placeholder="Enter number of days" type="number" value={days}
-               id="days" onChange={(event) => setDays(event.target.value)}/>
-            </div>
-            <div className="iform">
-              <label htmlFor="pick_date">Enter pick date like YYYY-MM-DD.</label>
-             <input placeholder="Enter pick date like YYYY-MM-DD." type="date" value={pickDate} id="pick_date" onChange={(event) => setPickDate(event.target.value)} />
-            </div>
-            <div className="dform">
-              <label htmlFor="user_id">User_id</label>
-              <input placeholder="user id" type="number" value={user_id} id="user_id" onChange={(event) => setUserId(event.target.value)} />
-            </div>
-            <div className='form-image'>
-              <label htmlFor="image">Image</label>
-            <Select options ={options} onChange={(event) => setCarId(event.value)} />
-            </div>
-            <div>
-                <button onClick={handleSubmit} type="button"> Submit </button>
-            </div>
-           </div>
-        </form>
+                <input
+                  placeholder="Enter number of days"
+                  type="number"
+                  value={days}
+                  id="days"
+                  onChange={(event) => setDays(event.target.value)}
+                />
+              </div>
+              <div className="iform">
+                <label htmlFor="pick_date">
+                  Enter pick date like YYYY-MM-DD.
+                </label>
+                <input
+                  placeholder="Enter pick date like YYYY-MM-DD."
+                  type="date"
+                  value={pickDate}
+                  id="pick_date"
+                  onChange={(event) => setPickDate(event.target.value)}
+                />
+              </div>
+              <div className="dform">
+                <label htmlFor="user_id">User_id</label>
+                <input
+                  placeholder="user id"
+                  type="number"
+                  value={user_id}
+                  id="user_id"
+                  onChange={(event) => setUserId(event.target.value)}
+                />
+              </div>
 
-         
+              <div className='submit'>
+                <button onClick={handleSubmit} type="button">
+                    Reserve Car
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <ToastContainer />
     </div>
-
   );
 };
 
