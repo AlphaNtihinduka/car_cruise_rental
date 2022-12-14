@@ -17,6 +17,7 @@ const DeleteCar = () => {
     const handleDelete = async (id) => {
       const response = await axios
         .delete(`http://127.0.0.1:5000/api/v1/cars/${id}`)
+        .catch((err) => err);
     };
 
     useEffect(() => {
