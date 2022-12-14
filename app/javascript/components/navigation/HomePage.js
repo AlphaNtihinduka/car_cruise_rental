@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Socials from './Socials';
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
 import { Link, useParams } from 'react-router-dom';
 import './styles.css';
@@ -12,13 +11,13 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-    <header className="title">
+     <header className="title">
         <h1>
           Welcome! to
           {title}
           Home Page
         </h1>
-    </header>
+     </header>
       <div className="home-text">
         <p>This a website where you can rent exoctic cars for a fee that suits your personality and various event that you may have </p>
         </div>
@@ -49,9 +48,7 @@ const HomePage = () => {
         </Link>
         )}
       </div>
-
-        </div>
-      <Socials />
+      </div>
     </div>
   );
 };
