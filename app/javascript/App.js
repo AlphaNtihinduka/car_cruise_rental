@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import '../assets/stylesheets/application.css';
 // import HomePage from './components/navigation/HomePage';
 import AddCar from './components/navigation/AddCar';
@@ -19,7 +20,11 @@ const App = () => (
         <Route exact path="/" element={<CarListing />} />
         <Route exact path="/car/:car_id" element={<CarDetails />} />
         <Route exact path="/reservations" element={<ReservationListing />} />
-        <Route exact path="/addreservation" element={<AddReservation />} />
+        <Route
+          exact
+          path="/car/:car_id/addreservation"
+          element={<AddReservation />}
+        />
       </Routes>
     </Router>
   </div>
