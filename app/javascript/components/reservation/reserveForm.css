@@ -1,0 +1,55 @@
+:root {
+  --text: #434b54;
+  --blue: #3778c2;
+  --green: #a2dc24;
+  --grey: rgba(219, 221, 224, 0.79);
+  --red: #f21905;
+  --white: aliceblue;
+}
+
+.socials {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.addcar-arrow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.left-arrow {
+  border: 32px solid var(--green);
+  border-radius: 33%;
+}
+
+.right-arrow {
+  border: 32px solid var(--green);
+  border-radius: 33%;
+}
+
+.add-form-container {
+  background-color: var(--green);
+}
+
+.form-container {
+  display: flex;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation {
+  box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
+  padding: 1rem;
+}

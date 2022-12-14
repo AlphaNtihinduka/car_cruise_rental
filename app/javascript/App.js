@@ -20,7 +20,7 @@ const App = () => (
         <Route exact path="/reservations" element={<ReservationListing />} />
         <Route
           exact
-          path="/car/:car_id/addreservation"
+          path="/car/:car_id/addreservations"
           element={<AddReservation />}
         />
       </Routes>
