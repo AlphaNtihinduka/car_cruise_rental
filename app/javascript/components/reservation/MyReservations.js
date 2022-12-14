@@ -18,7 +18,7 @@ const ReservationListing = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <>
-      <h1>Car listing</h1>
+      <h1>My reservations</h1>
       <ReservationComponent />
     </>
   );
