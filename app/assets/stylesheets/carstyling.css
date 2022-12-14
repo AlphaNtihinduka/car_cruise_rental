@@ -1,3 +1,19 @@
+.latest_model {
+  text-align: center;
+  color: #99c210;
+  margin-bottom: 0.3rem;
+}
+
+.selected_model {
+  text-align: center;
+  padding: 5px;
+  border-bottom: 2px dotted #99c210;
+  margin-bottom: 10px;
+  border-bottom-width: 0.5rem;
+  color: grey;
+  font-size: 1.2rem;
+}
+
 .all_cars_container {
   display: flex;
   justify-content: space-around;
