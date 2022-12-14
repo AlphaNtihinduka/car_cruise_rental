@@ -1,31 +1,31 @@
-import React from "react";
+import React from 'react';
 
+/* eslint-disable */ 
 const Pagination = ({
-    totalCars,
-    carsPerPage,
-    setCurrentPage,
-    currentPage,
+  totalCars,
+  carsPerPage,
+  setCurrentPage,
+  currentPage,
 }) => {
-    let pages = [];
+  const pages = [];
 
-    for (let i = 1; i <= Math.ceil(totalCars / carsPerPage); i++) {
-        pages.push(i);
-    }
+  for (let i = 1; i <= Math.ceil(totalCars / carsPerPage); i++) {
+    pages.push(i);
+  }
 
-    return (
-        <div className='pagination'>
-            {pages.map((page, index) => {
-                return (
-                    <button
-                        key={index}
-                        onClick={() => setCurrentPage(page)}
-                        className={page == currentPage ? "active" : ""}>
-                        {page}
-                    </button>
-                );
-            })}
-        </div>
-    );
+  return (
+    <div className="pagination">
+      {pages.map((page, index) => (
+        <button
+          key={index}
+          onClick={() => setCurrentPage(page)}
+          className={page == currentPage ? 'active' : ''}
+        >
+          {page}
+        </button>
+      ))}
+    </div>
+  );
 };
 
 export default Pagination;

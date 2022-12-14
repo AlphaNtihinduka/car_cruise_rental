@@ -1,27 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 // import Table from 'react-bootstrap/Table';
-import axios from 'axios';
+// import axios from 'axios';
 // import './styles.css';
 
 const AddReservation = () => {
-    const allCars = []
-    const manageCars = async () => {
-        const responses = await axios
-      .get('http://127.0.0.1:5000/api/v1/cars')
-      .catch((err) => err);
-      console.log("respo",responses.data)
-      responses.data.map((car) => {
-        allCars.push(car)
-        console.log(car)
-      }) 
-    }
- 
-      manageCars();
-    
-    // console.log("all cars",allCars)
+  const allCars = [];
+  // const manageCars = async () => {
+  //   const responses = await axios
+  //     .get('http://127.0.0.1:5000/api/v1/cars')
+  //     .catch((err) => err);
+  //   responses.data.map((car) => {
+  //     allCars.push(car);
+  //   });
+  // };
 
-    
-
+  // manageCars();
 
   const [days, setdays] = useState('');
   const [pickDate, setPickDate] = useState('');
@@ -43,32 +36,37 @@ const AddReservation = () => {
         'Content-Type': 'application/json',
       },
     });
-    console.log(await response.json());
-    window.location.href = "/reservations"
+    await response.json();
+    window.location.href = '/reservations';
   };
 
   return (
     <div className="add-form">
       <h1>Add A New reservation</h1>
-         
-            <input placeholder='days' type="number" value={days} id="days" onChange={(event) => setdays(event.target.value)} /> <br/>
-         
-            <input placeholder='pick date' type="text" value={pickDate} id="pick_date" onChange={(event) => setPickDate(event.target.value)} /> <br/>
-              
-            <select > 
-            <option>Select the car</option>
-            {console.log("all cars option: ",allCars)}
-               {allCars.map((car) => (          
-                <option key={car.id} value={car.id} onChange={(event) => setCarId(event.target.value)}>
-                  {/* {car.name} */}
-                  {console.log("cars:",car)}
-                </option>
-               ))}
-          </select><br/>
-            {/* <input placeholder='car id' type="number" value={car_id} id="car_id" onChange={(event) => setCarId(event.target.value)} /> <br/> */}
-             
-            <input placeholder='user id' type="number" value={user_id} id="user_id" onChange={(event) => setUserId(event.target.value)} /> <br/>
-    
+
+      <input placeholder="days" type="number" value={days} id="days" onChange={(event) => setdays(event.target.value)} />
+      {' '}
+      <br />
+
+      <input placeholder="pick date" type="text" value={pickDate} id="pick_date" onChange={(event) => setPickDate(event.target.value)} />
+      {' '}
+      <br />
+
+      <select>
+        <option>Select the car</option>
+        {allCars.map((car) => (
+          <option key={car.id} value={car.id} onChange={(event) => setCarId(event.target.value)}>
+            {/* {car.name} */}
+          </option>
+        ))}
+      </select>
+      <br />
+      {/* <input placeholder='car id' type="number" value={car_id} id="car_id" onChange={(event) => setCarId(event.target.value)} /> <br/> */}
+
+      <input placeholder="user id" type="number" value={user_id} id="user_id" onChange={(event) => setUserId(event.target.value)} />
+      {' '}
+      <br />
+
       <div>
         <button onClick={handleSubmit} type="button">Submit</button>
       </div>

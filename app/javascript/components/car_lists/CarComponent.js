@@ -11,35 +11,33 @@ const CarComponent = () => {
   const lastCarIndex = currentPage * carsPerPage;
   const firstCarIndex = lastCarIndex - carsPerPage;
   const currentCars = cars.slice(firstCarIndex, lastCarIndex);
-  
-    return (
-      <>
-      {currentCars.map((car) =>{
-        return <div key={car.id} className="car_container">
-        <Link to={`/car/${car.id}`}>
-          <div className='car_card'>
+
+  return (
+    <>
+      {currentCars.map((car) => (
+        <div key={car.id} className="car_container">
+          <Link to={`/car/${car.id}`}>
+            <div className="car_card">
               <div className="image">
                 <img src={car.image} alt="name" />
               </div>
-              <div className='name_description'>
+              <div className="name_description">
                 <h4>{car.name}</h4>
                 <p>{car.description}</p>
               </div>
-          </div>
-        </Link>
-      </div>
-       })
-      }
+            </div>
+          </Link>
+        </div>
+      ))}
       <Pagination
-                totalCars={cars.length}
-                carsPerPage={carsPerPage}
-                setCurrentPage={setCurrentPage}
-                currentPage={currentPage}
+        totalCars={cars.length}
+        carsPerPage={carsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+        setCarsPerPage={setCarsPerPage}
       />
-      </>
-    );
-
-}
-
+    </>
+  );
+};
 
 export default CarComponent;

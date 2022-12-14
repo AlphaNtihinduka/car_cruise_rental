@@ -1,62 +1,61 @@
 .all_cars_container {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
 }
 
 .car_card {
-    box-shadow: 16px 22px 31px -10px rgba(0,0,0,0.7) inset;
-    -webkit-box-shadow: 16px 22px 31px -10px rgba(0,0,0,0.7) inset;
-    -moz-box-shadow: 16px 22px 31px -10px rgba(0,0,0,0.7) inset;
-    border: 0.02rem solid #99c210; 
-    
+  box-shadow: 16px 22px 31px -10px rgba(0, 0, 0, 0.7) inset;
+  -webkit-box-shadow: 16px 22px 31px -10px rgba(0, 0, 0, 0.7) inset;
+  -moz-box-shadow: 16px 22px 31px -10px rgba(0, 0, 0, 0.7) inset;
+  border: 0.02rem solid #99c210;
 }
 
 .car_card:hover {
-    background-color: #99c210;
-    transition: all 0.4s ease;
-    transform: perspective(300px) translate3d(10px, 0, 0px);
+  background-color: #99c210;
+  transition: all 0.4s ease;
+  transform: perspective(300px) translate3d(10px, 0, 0);
 }
 
 .car_container {
-    width: 45%;
-    
+  width: 45%;
 }
 
 .image {
-    width: 100%;
-    height: 56vh;
+  width: 100%;
+  height: 56vh;
 }
 
 .image img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .name_description {
-    max-width: 30rem;
-    height: 6rem;
-    padding-left: 0.5rem;
+  max-width: 30rem;
+  height: 6rem;
+  padding-left: 0.5rem;
 }
 
 .name_description h4 {
-    text-align: center;
-    color: #ffc600;
-    font-size: 1.2rem;
-    font-weight: bold;
+  text-align: center;
+  color: #ffc600;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .name_description p {
-    text-align: center;
-    color: grey;
-    margin-top: 0.1rem;
+  text-align: center;
+  color: grey;
+  margin-top: 0.1rem;
 }
 
 @media only screen and (max-width: 600px) {
-    .image {
-        height: 40vh;
-    }
-    .name_description {
-        height: 8rem;
-    }
+  .image {
+    height: 40vh;
   }
+
+  .name_description {
+    height: 8rem;
+  }
+}
