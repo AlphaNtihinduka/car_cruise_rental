@@ -16,10 +16,7 @@ const AddReservation = () => {
   const [user_id, setUserId] = useState("");
   const {car_id } = useParams();
   const [carId, setCarId] = useState("");
-  // const [car, setCar] = useState();
- 
-  // Initialize state for car data
-
+  
   useEffect(() => {
     // Use `manageCars` function to fetch car data
     const manageCars = async () => {
@@ -35,9 +32,7 @@ const AddReservation = () => {
     manageCars();
   }, []);
 
-  console.log(allCars);
-  
-
+ 
    const options = [];
    allCars.filter((car) => {
      const obj = {};
@@ -91,48 +86,7 @@ const handleSubmit = async () => {
   }
 };
 
-  // Rest of your component code goes here
-
-  return (
-    // <div className="add-form">
-    //   <h1>Add A New reservation</h1>
-
-    //   <input
-    //     placeholder="Enter number of days "
-    //     type="number"
-    //     value={days}
-    //     id="days"
-    //     onChange={(event) => setDays(event.target.value)}
-    //   />
-    //   <br />
-    //   <input
-    //     placeholder="Enter pick date like YYYY-MM-DD."
-    //     type="date"
-    //     value={pickDate}
-    //     id="pick_date"
-    //     onChange={(event) => setPickDate(event.target.value)}
-    //   />
-    //   <br />
-
-    //  <Select options ={options} onChange={(event) => setCarId(event.value)} />
-
-    //   <br />
-    //   <input
-    //     placeholder="user id"
-    //     type="number"
-    //     value={user_id}
-    //     id="user_id"
-    //     onChange={(event) => setUserId(event.target.value)}
-    //   />
-    //   <br />
-    //   <div>
-    //     <button onClick={handleSubmit} type="button">
-    //       Submit
-    //     </button>
-    //   </div>
-    //   <ToastContainer />
-    // </div>
-
+return (
     <div className="form-container">
       <div className="add-form">
         <h1>Add A New Reservation</h1>
@@ -194,10 +148,3 @@ const handleSubmit = async () => {
 };
 
 export default AddReservation ;
-
-
-
-
-
-
-

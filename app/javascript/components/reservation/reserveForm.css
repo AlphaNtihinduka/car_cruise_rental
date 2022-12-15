@@ -29,8 +29,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  border: 2px solid #434b54;
-  margin-bottom: 5em;
+  border: 2px solid #eeed84;
   background-color: var(--green);
 }
 
