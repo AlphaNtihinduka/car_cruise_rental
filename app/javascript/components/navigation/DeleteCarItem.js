@@ -3,6 +3,10 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCars } from '../../redux/carActions/carActions';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 const DeleteCarItem = () => {
   const dispatch = useDispatch();
@@ -11,6 +15,7 @@ const DeleteCarItem = () => {
     const response = await axios
       .get('http://127.0.0.1:5000/api/v1/cars')
       .catch((err) => err);
+
     const cars = response.data.map((car) => ({
       id: car.id, // add the id property to the car object
       name: car.name,
@@ -27,12 +32,39 @@ const DeleteCarItem = () => {
 
   const cars = useSelector((state) => state.allcars.cars);
 
+
   const handleDelete = async (id) => {
     const response = await axios
       .delete(`http://127.0.0.1:5000/api/v1/cars/${id}`)
       .catch((err) => err);
+      // if(response.status === 200){
+      //   toast.success('Car succesfully deleted !', {
+      //     position: toast.POSITION.TOP_CENTER
+      // });
+  
+        fetchCars();
+        if (response.status === 200) {
+          // Success, show a message and reset the form
+          toast.success("Cars deleted successfully!", {
+            position: toast.POSITION.TOP_CENTER,
+          });
+        } else {
+          // Failure, show an error message
+          toast.error("Error deleting cars: " + response , {
+            position: toast.POSITION.TOP_CENTER,
+          });
+        };
+
+      // } else { (response.status == 200) {
+      //     // Failure, show an error message
+      //     toast.error("Error adding reservation: " + response , {
+      //       position: toast.POSITION.TOP_CENTER,
+      //     });
+      //   };
+      // };
       return response;
   };
+
 
   const carRender = cars.map((car) => {
     const {
@@ -49,7 +81,7 @@ const DeleteCarItem = () => {
         </Link>
       
          <button type="button" onClick={() => handleDelete(id)}>Delete</button>
-  
+         <ToastContainer />
       </div>
     );
   });
