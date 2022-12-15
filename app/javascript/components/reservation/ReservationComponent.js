@@ -3,24 +3,28 @@ import { useSelector } from 'react-redux';
 
 const ReservationComponent = () => {
   const reservations = useSelector((state) => state.allreservations.reservations);
-  const reservationRender = reservations.map((car) => (
-    <div key={car.id} className="reservation">
-      <h2>
-        Reservation days:
-        {car.days}
+  const reservationRender = reservations.map((reservation) => ( 
+    <div key={reservation.id} className="reservation">
+        {console.log(reservation.car.name)}
+
+        <div>
+          <div className="reservation_image">
+            <img src={reservation.car.image} alt="name" />
+          </div>
+          <h3>Car name{reservation.car.name}</h3>
+          <p>Total pricing: ${reservation.car.price_per_day * reservation.days}</p>
+        </div>
+      <p>
+        Reservation days: 
+        {reservation.days}
         {' '}
         days
-      </h2>
-      <h4>
+      </p>
+      <p>
         Pick date:
-        {car.pick_date}
-      </h4>
-      <>
-        {/* console.lo("reserved cars", {car})
-                {car[1].map((reserve_car_details) => {
-                    <p>{reserve_car_details.name}</p>
-                })} */}
-      </>
+        {reservation.pick_date}
+      </p>
+      <button>Cancel reservation</button>
     </div>
   ));
   return <>{reservationRender}</>;

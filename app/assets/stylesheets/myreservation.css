@@ -1,0 +1,9 @@
+.reservation_image {
+    height: 10rem;
+    width: 13rem;
+}
+
+.reservation_image img {
+    height: 100%;
+    width: 100%;
+}
