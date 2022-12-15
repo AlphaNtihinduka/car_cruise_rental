@@ -1,7 +1,6 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/reservations', type: :request do
-
   after(:all) do
     Reservation.destroy_all
     Item.destroy_all
@@ -12,31 +11,31 @@ RSpec.describe 'api/v1/reservations', type: :request do
   let(:Authorization) { generate_jwt_token_for(user) }
 
   path '/api/v1/cars/{car_id}/reservations' do
-      get('list reservations') do
-        tags 'Reservations'
-        produces 'application/json'
-        security [bearerAuth: []]
-  
-        response(200, 'successful') do
-          before { create_list(:car, 1) }
-          example 'application/json', :successful, {
-            code: 200,
-            data: [
-              {
-                id: '1',
-                type: 'reservation',
-                attributes: {
-                  id: 1,
-                  days: 20,
-                  pick_date: '2022-12-21',
-                  user_id: 1,
-                  car_id: 1,
-                }
+    get('list reservations') do
+      tags 'Reservations'
+      produces 'application/json'
+      security [bearerAuth: []]
+
+      response(200, 'successful') do
+        before { create_list(:car, 1) }
+        example 'application/json', :successful, {
+          code: 200,
+          data: [
+            {
+              id: '1',
+              type: 'reservation',
+              attributes: {
+                id: 1,
+                days: 20,
+                pick_date: '2022-12-21',
+                user_id: 1,
+                car_id: 1
               }
-            ]
-          }
-          run_test!
-        end
+            }
+          ]
+        }
+        run_test!
+      end
     end
 
     post('create reservation') do

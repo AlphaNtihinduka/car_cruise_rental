@@ -77,11 +77,11 @@ RSpec.describe 'api/v1/cars', type: :request do
                  name: { type: :string },
                  image: { type: :text },
                  description: { type: :text },
-                 price_per_day: { type: :decimal },
+                 price_per_day: { type: :decimal }
                },
-               required: %w[id name image description price_per_day ]
+               required: %w[id name image description price_per_day]
 
-        let(:id) { Car.create(name: 'Audi', price_per_day: 100.12, image: 'https://www.audi.com/content/dam/gbp2/experience-audi/audi-r8/audi-r8-coupe/audi-r8-coupe-2019/1920x1080/1920x1080-r8-coupe-2019-1.jpg', description: "Expensive car").id }
+        let(:id) { Car.create(name: 'Audi', price_per_day: 100.12, image: 'https://www.audi.com/content/dam/gbp2/experience-audi/audi-r8/audi-r8-coupe/audi-r8-coupe-2019/1920x1080/1920x1080-r8-coupe-2019-1.jpg', description: 'Expensive car').id }
         run_test!
       end
 
