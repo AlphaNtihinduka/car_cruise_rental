@@ -7,24 +7,6 @@
   --white: aliceblue;
 }
 
-.socials {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin: 20px 0 0 0;
-}
-
-.socials li {
-  margin: 0 10px;
-}
-
-.title h1 {
-  color: #434b54;
-  font-size: 0.9em;
-  margin: 1em;
-  background-color: red;
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -171,12 +153,6 @@ input, .select{
   margin: 0 10px;
 }
 
-.title {
-  color: #434b54;
-  font-size: 1em;
-  margin: 1em;
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -288,23 +264,5 @@ input, .select{
 .inner-form{
   width:100%;
 }
-
-
-
-/* .reservation {
-  box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
-  padding: 1rem;
-} */
-
-/* .left-arrow {
-  margin-top: 10em;
-  border: 32px solid var(--green);
-  border-radius: 33%;
-}
-
-.right-arrow {
-  border: 32px solid var(--green);
-  border-radius: 33%;
-} */
 
 }

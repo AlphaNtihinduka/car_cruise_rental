@@ -1,14 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './styles.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import Socials from "./Socials";
+import "./styles.css";
 
 const Navigate = () => (
-  <div>
-    <ul>
-      <li><Link to="/">Home Page</Link></li>
-      <li><Link to="/addcar">Add Car</Link></li>
-      <li><Link to="/delete">Delete</Link></li>
-    </ul>
+  <div className="link-container">
+    <div className="link-list">
+      <h1>Welcome! to " Car Cruise Rental " </h1>
+      <ul>
+        <li>
+          <Link to="/">CARS</Link>
+        </li>
+        <li>
+          <Link to="/MyReservations">MY RESERVATIONS</Link>
+        </li>
+        <li>
+          <Link to="/addcar">ADD CAR</Link>
+        </li>
+        <li>
+          <Link to="/DeleteCar">DELETE</Link>
+        </li>
+        <li>
+          <Link to="/Reserve a Car">RESERVE A CAR</Link>
+        </li>
+      </ul>
+      <div>
+        <Socials />
+      </div>
+    </div>
   </div>
 );
 

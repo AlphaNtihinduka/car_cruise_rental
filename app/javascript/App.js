@@ -7,6 +7,7 @@ import CarListing from './components/car_lists/CarListing';
 import CarDetails from './components/car_detail/CarDetail';
 import ReservationListing from './components/reservation/MyReservations';
 import AddReservation from './components/reservation/ReserveForm';
+import DeleteCarItem from "./components/navigation/DeleteCarItem";
 
 const App = () => (
   <div className="App">
@@ -23,6 +24,7 @@ const App = () => (
           path="/car/:car_id/addreservations"
           element={<AddReservation />}
         />
+        <Route exact path="/delete" element={<DeleteCarItem />} />
       </Routes>
     </Router>
   </div>
