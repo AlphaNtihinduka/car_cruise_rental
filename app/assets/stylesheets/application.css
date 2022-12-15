@@ -9,13 +9,12 @@
 }
 
 .App {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
-.App {
+  .App {
     flex-direction: column;
+  }
 }
-}
-
