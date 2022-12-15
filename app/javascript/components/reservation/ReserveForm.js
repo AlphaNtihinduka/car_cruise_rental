@@ -83,6 +83,7 @@ const handleSubmit = async () => {
     toast.error("Error adding reservation: " + error, {
       position: toast.POSITION.TOP_CENTER,
     });
+
   }
 };
 
@@ -141,6 +142,7 @@ return (
             </div>
           </form>
         </div>
+
       </div>
       <ToastContainer />
     </div>
