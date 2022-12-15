@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   root "root#index"
   get '*path', to: 'application#index', port: 5000
-  # resources :cars, except: :destroy do
-  #   delete '/', on: :member, action: :delete 
-  # end
+  resources :cars, except: :destroy do
+    delete '/', on: :member, action: :delete 
+  end
 
 end
