@@ -87,7 +87,7 @@ const handleSubmit = async () => {
 };
 
 return (
-    <div className="form-container">
+    <div className="rform-container">
       <div className="add-form">
         <h1>Add A New Reservation</h1>
         <div className="container d-flex justify-content-center align-items-center inner-form">

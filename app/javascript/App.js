@@ -10,7 +10,7 @@ import AddReservation from './components/reservation/ReserveForm';
 import DeleteCarItem from "./components/navigation/DeleteCarItem";
 
 const App = () => (
-  <div className="App">
+  <div className="App" id='app'>
     <Router>
       <Navigate />
       <Routes>
