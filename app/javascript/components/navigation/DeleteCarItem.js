@@ -37,31 +37,18 @@ const DeleteCarItem = () => {
     const response = await axios
       .delete(`http://127.0.0.1:5000/api/v1/cars/${id}`)
       .catch((err) => err);
-      // if(response.status === 200){
-      //   toast.success('Car succesfully deleted !', {
-      //     position: toast.POSITION.TOP_CENTER
-      // });
-  
+
         fetchCars();
         if (response.status === 200) {
-          // Success, show a message and reset the form
           toast.success("Cars deleted successfully!", {
             position: toast.POSITION.TOP_CENTER,
           });
         } else {
-          // Failure, show an error message
           toast.error("Error deleting cars: " + response , {
             position: toast.POSITION.TOP_CENTER,
           });
         };
 
-      // } else { (response.status == 200) {
-      //     // Failure, show an error message
-      //     toast.error("Error adding reservation: " + response , {
-      //       position: toast.POSITION.TOP_CENTER,
-      //     });
-      //   };
-      // };
       return response;
   };
 

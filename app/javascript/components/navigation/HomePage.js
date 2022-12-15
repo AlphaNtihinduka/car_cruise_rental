@@ -1,5 +1,6 @@
 import React from 'react';
 import Socials from './Socials';
+import CarListing from '../car_lists/CarListing';
 import './styles.css';
 
 const HomePage = () => {
@@ -13,6 +14,9 @@ const HomePage = () => {
           {title}
           HomePage
         </h1>
+      </div>
+      <div>
+        <CarListing />
       </div>
       <div>
         <Socials />
