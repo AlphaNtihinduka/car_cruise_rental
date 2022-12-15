@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import './styles.css';
+import "react-toastify/dist/ReactToastify.css";
+import "./reserveForm.css";
 
 const options = [
   { value: '/assets/audi.png', label: 'Audi' },
@@ -30,13 +32,24 @@ const AddCar = () => {
     car.image = image;
     car.user_id = user;
 
-    const response = await fetch('http://127.0.0.1:5000/api/v1/cars', {
-      method: 'POST',
+    const response = await fetch("http://127.0.0.1:5000/api/v1/cars", {
+      method: "POST",
       body: JSON.stringify(car),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
+
+    if (response.status === 200) {
+      toast.success("Cars created successfully!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      toast.error("Error creating a new car: " + response, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
+
     await response.json();
   };
 
