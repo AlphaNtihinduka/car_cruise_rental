@@ -3,7 +3,190 @@ openapi: 3.0.1
 info:
   title: API V1
   version: v1
-paths: {}
+paths:
+  "/api/v1/cars":
+    get:
+      summary: list cars
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create car
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/new":
+    get:
+      summary: new car
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit car
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/{id}":
+    get:
+      summary: Retrieves a Car
+      tags:
+      - cars
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: name found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image:
+                    type: text
+                  description:
+                    type: text
+                  price_per_day:
+                    type: decimal
+                required:
+                - id
+                - name
+                - image
+                - description
+                - price_per_day
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image:
+                    type: text
+                  description:
+                    type: text
+                  price_per_day:
+                    type: decimal
+                required:
+                - id
+                - name
+                - image
+                - description
+                - price_per_day
+        '404':
+          description: Car not found
+  "/api/v1/cars/{car_id}/reservations":
+    get:
+      summary: list reservations
+      tags:
+      - Reservations
+      security:
+      - bearerAuth: []
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              examples:
+                successful:
+                  value:
+                    code: 200
+                    data:
+                    - id: '1'
+                      type: reservation
+                      attributes:
+                        id: 1
+                        days: 20
+                        pick_date: '2022-12-21'
+                        user_id: 1
+                        car_id: 1
+    post:
+      summary: create reservation
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/{car_id}/reservations/new":
+    parameters:
+    - name: car_id
+      in: path
+      description: car_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: new reservation
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/{car_id}/reservations/{id}/edit":
+    parameters:
+    - name: car_id
+      in: path
+      description: car_id
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit reservation
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/{car_id}/reservations/{id}":
+    parameters:
+    - name: car_id
+      in: path
+      description: car_id
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show reservation
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update reservation
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update reservation
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete reservation
+      responses:
+        '200':
+          description: successful
 servers:
 - url: https://{defaultHost}
   variables:

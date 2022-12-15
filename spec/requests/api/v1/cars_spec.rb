@@ -65,65 +65,28 @@ RSpec.describe 'api/v1/cars', type: :request do
   end
 
   path '/api/v1/cars/{id}' do
-    # You'll want to customize the parameter types...
-    parameter name: 'id', in: :path, type: :string, description: 'id'
+    get 'Retrieves a Car' do
+      tags 'cars'
+      produces 'application/json', 'application/xml'
+      parameter name: :id, in: :path, type: :string
 
-    get('show car') do
-      response(200, 'successful') do
-        let(:id) { '123' }
+      response '200', 'name found' do
+        schema type: :object,
+               properties: {
+                 id: { type: :integer },
+                 name: { type: :string },
+                 image: { type: :text },
+                 description: { type: :text },
+                 price_per_day: { type: :decimal }
+               },
+               required: %w[id name image description price_per_day]
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
+        let(:id) { Car.create(name: 'Audi', price_per_day: 100.12, image: 'https://www.audi.com/content/dam/gbp2/experience-audi/audi-r8/audi-r8-coupe/audi-r8-coupe-2019/1920x1080/1920x1080-r8-coupe-2019-1.jpg', description: 'Expensive car').id }
         run_test!
       end
-    end
 
-    patch('update car') do
-      response(200, 'successful') do
-        let(:id) { '123' }
-
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-
-    put('update car') do
-      response(200, 'successful') do
-        let(:id) { '123' }
-
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-
-    delete('delete car') do
-      response(200, 'successful') do
-        let(:id) { '123' }
-
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
+      response '404', 'Car not found' do
+        let(:id) { 'invalid' }
         run_test!
       end
     end
