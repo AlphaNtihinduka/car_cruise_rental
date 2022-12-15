@@ -35,7 +35,7 @@ gem 'devise-jwt'
 
 gem 'rack-cors'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: %i[development test]
 
 gem 'fast_jsonapi'
 
