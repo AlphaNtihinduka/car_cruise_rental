@@ -1,28 +1,64 @@
 require 'swagger_helper'
 
-describe 'cars API' do
+RSpec.describe 'api/v1/cars', type: :request do
   path '/api/v1/cars' do
-    post 'Creates a car' do
-      tags 'cars'
-      consumes 'application/json', 'application/xml'
-      parameter name: :car, in: :body, schema: {
-        type: :object,
-        properties: {
-          name: { type: :string },
-          image: { type: :text },
-          description: { type: :text },
-          price_per_day: { type: :decimal },
-        },
-        required: %w[name status]
-      }
-
-      response '201', 'Car created' do
-        let(:car) { { name: 'Audi', status: 'available' } }
+    get('list cars') do
+      response(200, 'successful') do
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
         run_test!
       end
+    end
 
-      response '422', 'invalid request' do
-        let(:car) { { name: 'BMW' } }
+    post('create car') do
+      response(200, 'successful') do
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
+  end
+
+  path '/api/v1/cars/new' do
+    get('new car') do
+      response(200, 'successful') do
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
+  end
+
+  path '/api/v1/cars/{id}/edit' do
+    # You'll want to customize the parameter types...
+    parameter name: 'id', in: :path, type: :string, description: 'id'
+
+    get('edit car') do
+      response(200, 'successful') do
+        let(:id) { '123' }
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
         run_test!
       end
     end
@@ -56,135 +92,3 @@ describe 'cars API' do
     end
   end
 end
-
-# require 'swagger_helper'
-
-# RSpec.describe 'api/v1/cars', type: :request do
-#   path '/api/v1/cars' do
-#     get('list cars') do
-#       response(200, 'successful') do
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-
-#     post('create car') do
-#       response(200, 'successful') do
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-#   end
-
-#   path '/api/v1/cars/new' do
-#     get('new car') do
-#       response(200, 'successful') do
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-#   end
-
-#   path '/api/v1/cars/{id}/edit' do
-#     # You'll want to customize the parameter types...
-#     parameter name: 'id', in: :path, type: :string, description: 'id'
-
-#     get('edit car') do
-#       response(200, 'successful') do
-#         let(:id) { '123' }
-
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-#   end
-
-#   path '/api/v1/cars/{id}' do
-#     # You'll want to customize the parameter types...
-#     parameter name: 'id', in: :path, type: :string, description: 'id'
-
-#     get('show car') do
-#       response(200, 'successful') do
-#         let(:id) { '123' }
-
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-
-#     patch('update car') do
-#       response(200, 'successful') do
-#         let(:id) { '123' }
-
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-
-#     put('update car') do
-#       response(200, 'successful') do
-#         let(:id) { '123' }
-
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-
-#     delete('delete car') do
-#       response(200, 'successful') do
-#         let(:id) { '123' }
-
-#         after do |example|
-#           example.metadata[:response][:content] = {
-#             'application/json' => {
-#               example: JSON.parse(response.body, symbolize_names: true)
-#             }
-#           }
-#         end
-#         run_test!
-#       end
-#     end
-#   end
-# end
