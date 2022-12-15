@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 import './auth.css';
 
 function Login() {
   const [Username, setUsername] = useState();
   const [Password, setPassword] = useState();
 
+  const navigate = useNavigate();
   const sendForm = async () => {
     const dataform = {
       method: 'POST',
@@ -24,17 +26,14 @@ function Login() {
       console.log('LoggedIN', response);
       const userData = await response.json();
       localStorage.setItem('current_user', JSON.stringify(userData));
-        <Link to="/signup" />;
-        window.location.href = '/car';
-    } else {
-      console.log('error credentials');
+      navigate('/carlist');
     }
+    console.log('error credentials');
   };
 
   return (
     <div className="container">
-      <form className="container-form" method="POST" onSubmit={sendForm()}>
-        <h2>LOGIN</h2>
+      <form className="container-form">
 
         <div className="form-input">
           <input
@@ -72,7 +71,7 @@ function Login() {
         </p>
 
         <div className="">
-          <button type="submit" className="form-button">
+          <button type="submit" className="form-button" onSubmit={sendForm()}>
             Login
           </button>
         </div>
@@ -82,3 +81,15 @@ function Login() {
 }
 
 export default Login;
+
+// import React from 'react';
+
+// function Login() {
+//   return (
+//     <div className="container">
+//       <h1>Hello</h1>
+//     </div>
+//   );
+// }
+
+// export default Login;

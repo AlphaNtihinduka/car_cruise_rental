@@ -9,20 +9,24 @@ import ReservationListing from './components/reservation/MyReservations';
 import AddReservation from './components/reservation/ReserveForm';
 import Login from './pages/auth/login';
 import Signup from './pages/auth/registration';
+import ProtectedRoutes from './pages/auth/protectedRoutes';
 
 const App = () => (
+
   <div className="App">
     <Router>
+
       <Navigate />
       <Routes>
-        <Route exact path="/addcar" element={<AddCar />} />
-        <Route exact path="/" element={<CarListing />} />
-        <Route exact path="/car/:car_id" element={<CarDetails />} />
-        <Route exact path="/reservations" element={<ReservationListing />} />
-        <Route exact path="/addreservation" element={<AddReservation />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/car" element={<CarListing />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route exact path="/addcar" element={<AddCar />} />
+          <Route exact path="/carlist" element={<CarListing />} />
+          <Route exact path="/car/:car_id" element={<CarDetails />} />
+          <Route exact path="/reservations" element={<ReservationListing />} />
+          <Route exact path="/addreservation" element={<AddReservation />} />
+        </Route>
       </Routes>
     </Router>
   </div>

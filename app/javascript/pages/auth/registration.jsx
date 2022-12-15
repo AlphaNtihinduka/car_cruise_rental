@@ -24,7 +24,7 @@ function Signup() {
     );
     if (response.ok) {
       const userData = await response.json();
-      localStorage.setItem('saved', JSON.stringify(userData));
+      localStorage.setItem('saved_user', JSON.stringify(userData));
       console.log('User Registered', userData);
       window.location.href = '/';
     } else {
