@@ -9,3 +9,4 @@ export const selectedCar = (car) => ({
   type: ActionTypes.SELECTED_CAR,
   payload: car,
 });
+

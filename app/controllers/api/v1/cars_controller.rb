@@ -34,7 +34,8 @@ class Api::V1::CarsController < ApplicationController
   # DELETE /cars/1
   def destroy
     @car = Car.find(params[:id])
-    @car.delete
+    @car.destroy
+    render json: { message: "Car deleted" }
   end
 
   alias delete destroy

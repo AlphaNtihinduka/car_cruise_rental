@@ -7,7 +7,7 @@ const Navigate = () => (
     <ul>
       <li><Link to="/">Home Page</Link></li>
       <li><Link to="/addcar">Add Car</Link></li>
-      <li><Link to="/delete">Delete</Link></li>
+      <li><Link to="/delete">DELETE</Link></li>
     </ul>
   </div>
 );
