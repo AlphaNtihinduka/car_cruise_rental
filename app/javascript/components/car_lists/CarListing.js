@@ -18,8 +18,15 @@ const CarListing = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <>
-      <h1>Car listing</h1>
-      <CarComponent />
+    <div>
+      <div className="carlist-title">
+        <h1>Car listing</h1>
+      </div>
+      <div className="carlist-img">
+        <CarComponent />
+      </div>
+    </div>
+    
     </>
   );
 };

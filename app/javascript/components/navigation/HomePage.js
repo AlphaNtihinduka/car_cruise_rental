@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
-import { Link, useParams } from 'react-router-dom';
+import CarListing from '../car_lists/CarListing';
+import Socials from '../navigation/Socials';
 import './styles.css';
 
 const HomePage = () => {
-  const { car_id } = useParams();
-  const [car, setCar] = useState(null);
-  const [largest_id, setLargestId] = useState(0);
   const title = ' Car Cruise Rental ';
 
   return (
@@ -18,36 +15,9 @@ const HomePage = () => {
           Home Page
         </h1>
      </header>
-      <div className="home-text">
-        <p>This a website where you can rent exoctic cars for a fee that suits your personality and various event that you may have </p>
-        </div>
-        <div>
-        <div className="inside_Arrows">
-        {car_id > 1 && (
-          <Link
-            to={`/car/${parseInt(car_id, 10) - 1}`}
-            className="lArrow_container btn"
-          >
-            <div>
-              <span className="arrow">
-                <BiLeftArrow />
-              </span>
-            </div>
-          </Link>
-        )}
-        {car_id < largest_id && (
-        <Link
-          to={`/car/${parseInt(car_id, 10) + 1}`}
-          className="rArrow_container btn"
-        >
-          <div>
-            <span className="arrow">
-              <BiRightArrow />
-            </span>
-          </div>
-        </Link>
-        )}
-      </div>
+        <CarListing />
+      <div>
+        <Socials />
       </div>
     </div>
   );

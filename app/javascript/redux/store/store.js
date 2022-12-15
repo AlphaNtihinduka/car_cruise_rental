@@ -1,8 +1,7 @@
-// import { configureStore } from '@reduxjs/toolkit';
-// import reducers from './combinedReducer';
-// import { configureStore } from '@reduxjs/toolkit';
-// import reducers from '../combinedReducers/combinedReducers';
+import { configureStore } from '@reduxjs/toolkit';
+import reducers from '../combinedReducers/combinedReducers';
 
-// const store = configureStore({ reducer: reducers });
+const store = configureStore({ reducer: reducers });
 
-// export default store;
+export default store;
+

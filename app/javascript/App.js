@@ -6,7 +6,8 @@ import AddCar from './components/navigation/AddCar';
 import Navigate from './components/navigation/Navigate';
 import CarListing from './components/car_lists/CarListing';
 import CarDetails from './components/car_detail/CarDetail';
-import DeleteCar from './components/navigation/DeleteCar';
+import DeleteCarItem from './components/navigation/DeleteCarItem';
+import ReservationListing from './components/reservation/MyReservations';
 
 const App = () => (
   <div className="App">
@@ -17,9 +18,10 @@ const App = () => (
         <Route exact path="/addcar" element={<AddCar />} />
         <Route exact path="/" element={<CarListing />} />
         <Route exact path="/car/:car_id" element={<CarDetails />} />
-        <Route exact path="/DeleteCar" element={<DeleteCar />} />
+        <Route exact path="/delete" element={<DeleteCarItem />} />
+        <Route exact path="/cars/:car_id/reservations" element={<ReservationListing />} />
       </Routes>
-    </Router>
+    </Router>    
   </div>
 );
 export default App;

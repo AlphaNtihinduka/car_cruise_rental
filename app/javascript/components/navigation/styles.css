@@ -11,9 +11,8 @@
 
 .title h1 {
   color: #434b54;
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
   margin: 1em;
-  background-color: red;
 }
 
 .form-container {
@@ -137,10 +136,16 @@
   margin: 0 10px;
 }
 
-.title {
+.title h1 {
   color: #434b54;
-  font-size: 1em;
   margin: 1em;
+  background-color: red;
+}
+
+.carlist-img {
+  display: flex;
+  flex-direction: 1fr 1fr;
+  background-color: #a2dc24;
 }
 
 .form-container {
@@ -222,7 +227,7 @@
   flex-direction: column;
   margin: 1em;
 }
-
+F
 .inside_Arrows {
   display: flex;
   gap: 2em;
@@ -250,21 +255,5 @@
 .add-form-container {
   background-color: rgba(152, 181, 7, 0.89);
 }
-
-/* .reservation {
-  box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
-  padding: 1rem;
-} */
-
-/* .left-arrow {
-  margin-top: 10em;
-  border: 32px solid #a2dc24;
-  border-radius: 33%;
-}
-
-.right-arrow {
-  border: 32px solid #a2dc24;
-  border-radius: 33%;
-} */
 
 }
