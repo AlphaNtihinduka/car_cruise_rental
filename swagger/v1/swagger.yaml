@@ -3,7 +3,107 @@ openapi: 3.0.1
 info:
   title: API V1
   version: v1
-paths: {}
+paths:
+  "/api/v1/cars":
+    post:
+      summary: Creates a car
+      tags:
+      - cars
+      parameters: []
+      responses:
+        '201':
+          description: Car created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                image:
+                  type: text
+                description:
+                  type: text
+                price_per_day:
+                  type: decimal
+              required:
+              - name
+              - status
+          application/xml:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                image:
+                  type: text
+                description:
+                  type: text
+                price_per_day:
+                  type: decimal
+              required:
+              - name
+              - status
+  "/api/v1/cars/{id}":
+    get:
+      summary: Retrieves a Car
+      tags:
+      - cars
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: name found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image:
+                    type: text
+                  description:
+                    type: text
+                  price_per_day:
+                    type: decimal
+                required:
+                - id
+                - name
+                - image
+                - description
+                - price_per_day
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image:
+                    type: text
+                  description:
+                    type: text
+                  price_per_day:
+                    type: decimal
+                required:
+                - id
+                - name
+                - image
+                - description
+                - price_per_day
+        '404':
+          description: Car not found
 servers:
 - url: https://{defaultHost}
   variables:
