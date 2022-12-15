@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import { Link, useParams } from "react-router-dom";
-import "./styles.css";
+import React, { useState } from 'react';
+import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
+import { Link, useParams } from 'react-router-dom';
+import './styles.css';
 
 const HomePage = () => {
   const { car_id } = useParams();
-  const [car, setCar] = useState(null);
-  const [largest_id, setLargestId] = useState(0);
-  const title = " Car Cruise Rental ";
+  const title = ' Car Cruise Rental ';
 
   return (
     <div className="home-container">
@@ -21,7 +19,8 @@ const HomePage = () => {
       <div className="home-text">
         <p>
           This a website where you can rent exoctic cars for a fee that suits
-          your personality and various event that you may have{" "}
+          your personality and various event that you may have
+          {' '}
         </p>
       </div>
       <div>

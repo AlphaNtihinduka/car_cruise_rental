@@ -54,7 +54,10 @@ const CarDetails = () => {
               </tr>
               <tr>
                 <th>Price per day:</th>
-                <td>${car.price_per_day}</td>
+                <td>
+                  $
+                  {car.price_per_day}
+                </td>
               </tr>
             </tbody>
           </table>

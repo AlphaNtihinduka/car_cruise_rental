@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Socials from "./Socials";
-import "./styles.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Socials from './Socials';
+import './styles.css';
 
 const Navigate = () => (
   <div className="link-container">

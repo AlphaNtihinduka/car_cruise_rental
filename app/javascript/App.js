@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import '../assets/stylesheets/application.css';
 import AddCar from './components/navigation/AddCar';
 import Navigate from './components/navigation/Navigate';
@@ -7,10 +7,10 @@ import CarListing from './components/car_lists/CarListing';
 import CarDetails from './components/car_detail/CarDetail';
 import ReservationListing from './components/reservation/MyReservations';
 import AddReservation from './components/reservation/ReserveForm';
-import DeleteCarItem from "./components/navigation/DeleteCarItem";
+import DeleteCarItem from './components/navigation/DeleteCarItem';
 
 const App = () => (
-  <div className="App" id='app'>
+  <div className="App" id="app">
     <Router>
       <Navigate />
       <Routes>

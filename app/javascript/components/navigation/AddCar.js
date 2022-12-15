@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import Select from "react-select";
-import "./styles.css";
+import React, { useState } from 'react';
+import Select from 'react-select';
+import './styles.css';
 
 const options = [
-  { value: "/assets/audi.png", label: "Audi" },
-  { value: "/assets/blackcar.png", label: "Black Car" },
-  { value: "/assets/chevroelt.png", label: "Chevrolet" },
-  { value: "/assets/ferrari.png", label: "Ferrari" },
-  { value: "/assets/ford.png", label: "Ford" },
+  { value: '/assets/audi.png', label: 'Audi' },
+  { value: '/assets/blackcar.png', label: 'Black Car' },
+  { value: '/assets/chevroelt.png', label: 'Chevrolet' },
+  { value: '/assets/ferrari.png', label: 'Ferrari' },
+  { value: '/assets/ford.png', label: 'Ford' },
 ];
 
 const AddCar = () => {
-  const [name, setname] = useState("");
-  const [pricePerDay, setPricePerDay] = useState("");
-  const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
-  const [user, setUser] = useState("");
+  const [name, setname] = useState('');
+  const [pricePerDay, setPricePerDay] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState('');
+  const [user, setUser] = useState('');
 
   const handleSelectChange = (selectedOption) => {
     setImage(selectedOption.value);
@@ -30,11 +30,11 @@ const AddCar = () => {
     car.image = image;
     car.user_id = user;
 
-    const response = await fetch("http://127.0.0.1:5000/api/v1/cars", {
-      method: "POST",
+    const response = await fetch('http://127.0.0.1:5000/api/v1/cars', {
+      method: 'POST',
       body: JSON.stringify(car),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
     await response.json();

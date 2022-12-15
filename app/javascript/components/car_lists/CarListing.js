@@ -1,14 +1,14 @@
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import React, { useEffect } from "react";
-import CarComponent from "./CarComponent";
-import { setCars } from "../../redux/carActions/carActions";
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import CarComponent from './CarComponent';
+import { setCars } from '../../redux/carActions/carActions';
 
 const CarListing = () => {
   const dispatch = useDispatch();
   const fetchdata = async () => {
     const response = await axios
-      .get("http://127.0.0.1:5000/api/v1/cars")
+      .get('http://127.0.0.1:5000/api/v1/cars')
       .catch((err) => err);
     dispatch(setCars(response.data));
   };
@@ -28,7 +28,7 @@ const CarListing = () => {
       <div className="all_cars_container">
         <CarComponent />
       </div>
-      
+
     </div>
 
   );

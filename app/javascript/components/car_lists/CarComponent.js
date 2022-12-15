@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import Pagination from "./Pagination";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Pagination from './Pagination';
 
 const CarComponent = () => {
   const cars = useSelector((state) => state.allcars.cars);

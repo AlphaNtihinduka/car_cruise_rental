@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setCars } from "../../redux/carActions/carActions";
-import { Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useEffect } from 'react';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import { setCars } from '../../redux/carActions/carActions';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DeleteCarItem = () => {
   const dispatch = useDispatch();
 
   const fetchCars = async () => {
     const response = await axios
-      .get("http://127.0.0.1:5000/api/v1/cars")
+      .get('http://127.0.0.1:5000/api/v1/cars')
       .catch((err) => err);
 
     const cars = response.data.map((car) => ({
@@ -36,11 +36,11 @@ const DeleteCarItem = () => {
 
     fetchCars();
     if (response.status === 200) {
-      toast.success("Cars deleted successfully!", {
+      toast.success('Cars deleted successfully!', {
         position: toast.POSITION.TOP_CENTER,
       });
     } else {
-      toast.error("Error deleting cars: " + response, {
+      toast.error(`Error deleting cars: ${response}`, {
         position: toast.POSITION.TOP_CENTER,
       });
     }
