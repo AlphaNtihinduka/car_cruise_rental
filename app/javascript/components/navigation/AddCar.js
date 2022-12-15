@@ -112,41 +112,7 @@ const AddCar = () => {
             </div>
           </form>
 
-          {/* <Table className="table d-flex grid-template-column-1fr 1fr">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>User ID</th>
-                <th>Price Per Day</th>
-                <th>Description</th>
-                <th>Image</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="text" value={name} id="name" onChange={(event) => setname(event.target.value)} />
-                </td>
-                <td>
-                  <input type="text" value={user} id="user_id" onChange={(event) => setUser(event.target.value)} />
-                </td>
-                <td>
-                  <input type="text" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
-                </td>
-                <td>
-                  <input type="text" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
-                </td>
-                <td>
-                <select>
-               <input type="text" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
-                  <option >
-                    Select Image
-                 </option>
-          </select>
-                </td>
-              </tr>
-            </tbody>
-          </Table> */}
+          
         </div>
       </div>
       <ToastContainer />
