@@ -2,10 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Car, type: :model do
   subject do
-    User.create(name: 'NTIHINDUKA ALPHA', email: 'ntihindukaalpha@yahoo.com', password: '1234567890', password_confirmation: '1234567890')
+    User.create(name: 'NTIHINDUKA ALPHA', email: 'ntihindukaalpha@yahoo.com', password: '1234567890',
+                password_confirmation: '1234567890')
   end
   before do
-    @car = Car.create(image: "/assets/Cruise-A.png" , name: "Cruise-A" , description:"Yellow fast Ford with a luxurious interior.", price_per_day: 300.0, user: subject)
+    @car = Car.create(image: '/assets/Cruise-A.png', name: 'Cruise-A',
+                      description: 'Yellow fast Ford with a luxurious interior.', price_per_day: 300.0, user: subject)
   end
 
   context 'Validations should be working' do
