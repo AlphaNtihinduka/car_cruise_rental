@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import './styles.css';
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./reserveForm.css";
 
 const options = [
   { value: '/assets/audi.png', label: 'Audi' },
@@ -149,6 +149,7 @@ const AddCar = () => {
           </Table> */}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
