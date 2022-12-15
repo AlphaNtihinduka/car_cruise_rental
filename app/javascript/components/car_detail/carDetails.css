@@ -1,4 +1,5 @@
 /* car details */
+
 :root {
   --text: #434b54;
   --blue: #3778c2;
@@ -10,14 +11,14 @@
 
 a {
   text-decoration: none;
+
 }
 
 .cDetails_container {
   display: flex;
   flex-direction: column;
   gap: 5em;
-  border: 2px solid black;
-  margin-bottom: 5em;
+  padding: 5em 0;
 }
 
 .carInfor {
@@ -31,7 +32,7 @@ a {
 }
 
 .dcar_image {
-  width: 754px;
+  width: 660px;
 }
 
 .mainName {
@@ -47,10 +48,7 @@ a {
 }
 
 .inside_Arrows {
-  display: flex;
-  gap: 2em;
-  justify-content: space-between;
-  align-items: center;
+ margin-top: 2px;
 }
 
 .btn {
@@ -64,7 +62,6 @@ a {
 .rArrow_container,
 .lArrow_container {
   display: flex;
-  height: 5.5vh;
   width: 9%;
   align-items: center;
   justify-content: center;
@@ -72,19 +69,29 @@ a {
 
 .lArrow_container {
   border-radius: 0 76px 76px 0;
+  float:left;
 }
 
 .rArrow_container {
   border-radius: 76px 0 0 76px;
+  float:right;
 }
 
 .dReserve_btn {
+  display: flex;
+  flex-direction: column;
   background-color: var(--green);
-  width: 19%;
-  font-size: 20px;
+  width: 25%;
+  font-size: 24px;
   margin-left: 74%;
-  border-radius: 27% 10%;
   border-radius: 58px 58px 58px 58px;
+}
+
+.linkReserve
+    {
+    color: var(--white);
+    text-align: center;
+    font-style: bold;
 }
 
 table,
@@ -110,4 +117,48 @@ tr:nth-child(odd) {
 .arrow {
   color: var(--white);
   font-size: 27px;
+}
+
+/* mobile version */
+
+@media screen and (max-width: 800px) {
+.App {
+    flex-direction: column;
+}
+
+.cDetails_container {
+    border:none;
+    margin-bottom: 4em;
+}
+
+.carInfor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cDetails_image {
+    width: 50%;
+}
+
+.dcar_image {
+    width: 250px;
+}
+
+.cDetails_table {
+    width: 98%;
+    margin-top: 0em;
+}
+
+.dReserve_btn {
+    display: flex;
+    width: 61%;
+    margin: 0 auto;
+    font-size: 24px;
+    flex-direction: column;
+}
+
+.App {
+    grid-template-columns: 1fr;
+}
 }
