@@ -1,3 +1,7 @@
+@import "carstyling.css";
+@import "pagination.css";
+
+
 * {
   margin: 0;
   padding: 0;
