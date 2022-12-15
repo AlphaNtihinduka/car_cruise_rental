@@ -6,7 +6,8 @@ import "./styles.css";
 const Navigate = () => (
   <div className="link-container">
     <div className="link-list">
-      <h1>Welcome! to " Car Cruise Rental " </h1>
+      <h1>Welcome! to</h1>
+      <h1>Car Cruise Rental</h1>
       <ul>
         <li>
           <Link to="/">CARS</Link>
@@ -21,7 +22,7 @@ const Navigate = () => (
           <Link to="/DeleteCar">DELETE</Link>
         </li>
         <li>
-          <Link to="/Reserve a Car">RESERVE A CAR</Link>
+          <Link to="/car/1/addreservations">RESERVE A CAR</Link>
         </li>
       </ul>
       <div>
