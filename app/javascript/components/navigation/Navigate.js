@@ -15,7 +15,7 @@ const Navigate = () => (
       <nav>
         <ul className="nav-menu-items" id="links">
           <li>
-            <Link to="/">CARS</Link>
+            <Link to="/carlist">CARS</Link>
           </li>
           <li>
             <Link to="/MyReservations">MY RESERVATIONS</Link>
@@ -35,6 +35,7 @@ const Navigate = () => (
         <Socials />
       </div>
     </div>
+  </div>
 );
 
 export default Navigate;
