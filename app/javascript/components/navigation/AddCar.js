@@ -12,6 +12,14 @@ const options = [
   { value: '/assets/ford.png', label: 'Ford' },
 ];
 
+const options = [
+  { value: '/assets/audi.png', label: 'Audi' },
+  { value: '/assets/blackcar.png', label: 'Black Car' },
+  { value: '/assets/chevroelt.png', label: 'Chevrolet' },
+  { value: '/assets/ferrari.png', label: 'Ferrari' },
+  { value: '/assets/ford.png', label: 'Ford' },
+];
+
 const AddCar = () => {
   const [name, setname] = useState('');
   const [pricePerDay, setPricePerDay] = useState('');
@@ -101,21 +109,14 @@ const AddCar = () => {
                 <Select options={options} onChange={handleSelectChange} />
               </div>
               <div>
-                <button
-                  className="btn-form"
-                  onClick={handleSubmit}
-                  type="button"
-                >
-                  Submit
-                </button>
+               <button className="btn-form" onClick={handleSubmit} type="button">Submit</button>
               </div>
             </div>
-          </form>
-
-          
+          </form>        
         </div>
       </div>
       <ToastContainer />
+
     </div>
   );
 };
