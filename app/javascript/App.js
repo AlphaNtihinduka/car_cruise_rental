@@ -8,7 +8,6 @@ import CarDetails from './components/car_detail/CarDetail';
 import DeleteCarItem from './components/navigation/DeleteCarItem';
 import ReservationListing from './components/reservation/MyReservations';
 import AddReservation from './components/reservation/ReserveForm';
-import DeleteCarItem from './components/navigation/DeleteCarItem';
 import Login from './pages/auth/login';
 import Signup from './pages/auth/registration';
 import ProtectedRoutes from './pages/auth/protectedRoutes';
