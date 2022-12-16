@@ -35,7 +35,6 @@ const Navigate = () => (
         <Socials />
       </div>
     </div>
-  </div>
 );
 
 export default Navigate;

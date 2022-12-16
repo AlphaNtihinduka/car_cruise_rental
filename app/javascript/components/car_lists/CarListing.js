@@ -28,9 +28,7 @@ const CarListing = () => {
       <div className="all_cars_container">
         <CarComponent />
       </div>
-
     </div>
-
   );
 };
 

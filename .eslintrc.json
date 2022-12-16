@@ -31,7 +31,8 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "camelcase": "off",
-    "max-len": ["error", { "code": 800 }]
+    "max-len": ["error", { "code": 800 }],
+    "no-tabs": 0
   },
   "ignorePatterns": [
     "dist/",

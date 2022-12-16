@@ -37,6 +37,7 @@ const AddCar = () => {
         'Content-Type': 'application/json',
       },
     });
+    await response.json();
   };
 
   return (
