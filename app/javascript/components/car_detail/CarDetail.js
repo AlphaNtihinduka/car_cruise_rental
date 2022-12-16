@@ -78,21 +78,21 @@ const CarDetails = () => {
           </Link>
         )}
         {car_id < largest_id && (
-        <Link
-          to={`/car/${parseInt(car_id, 10) + 1}`}
-          className="rArrow_container btn"
-        >
-          <div>
-            <span className="arrow">
-              <BiRightArrow />
-            </span>
-          </div>
-        </Link>
+          <Link
+            to={`/car/${parseInt(car_id, 10) + 1}`}
+            className="rArrow_container btn"
+          >
+            <div>
+              <span className="arrow">
+                <BiRightArrow />
+              </span>
+            </div>
+          </Link>
         )}
       </div>
 
-      <div className="dReserve_btn btn">
-        <Link to="/reservations" className="linkReserve">
+      <div className="dReserve_btn btn" key={car_id}>
+        <Link to={`/car/${car_id}/addreservations`} className="linkReserve">
           Reserve this Car
         </Link>
       </div>

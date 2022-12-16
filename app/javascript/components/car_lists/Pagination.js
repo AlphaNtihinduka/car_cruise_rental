@@ -1,6 +1,7 @@
 import React from 'react';
 
-/* eslint-disable */ 
+/* eslint-disable */
+
 const Pagination = ({
   totalCars,
   carsPerPage,
@@ -16,10 +17,10 @@ const Pagination = ({
   return (
     <div className="pagination">
       {pages.map((page, index) => (
-        <button
+        <button 
           key={index}
           onClick={() => setCurrentPage(page)}
-          className={page == currentPage ? 'active' : ''}
+          className={page == currentPage ? "active" : ""}
         >
           {page}
         </button>
