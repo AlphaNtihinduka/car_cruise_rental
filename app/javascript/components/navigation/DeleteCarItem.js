@@ -51,20 +51,21 @@ const DeleteCarItem = () => {
   const carRender = cars.map((car) => {
     const { id, name, image } = car;
     return (
-      <div key={id}>
+      <div  className="dcontainer" key={id}>
         <Link to={`/car/${id}`}>
-          <div className="image">
+          <h2 id='dcarname'>{name}</h2>
+          <div className="dimage">
             <img src={image} alt="name" />
           </div>
-          <h2>{name}</h2>
+          
         </Link>
-        <button type="button" onClick={() => handleDelete(id)}>Delete</button>
+        <button className='dbtn' type="button" onClick={() => handleDelete(id)}>Delete</button>
         <ToastContainer />
       </div>
     );
   });
 
-  return <>{carRender}</>;
+  return <div>{carRender}</div>;
 };
 
 export default DeleteCarItem;

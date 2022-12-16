@@ -18,7 +18,7 @@ const Navigate = () => (
             <Link to="/carlist">CARS</Link>
           </li>
           <li>
-            <Link to="/MyReservations">MY RESERVATIONS</Link>
+            <Link to="/reservations">MY RESERVATIONS</Link>
           </li>
           <li>
             <Link to="/addcar">ADD CAR</Link>

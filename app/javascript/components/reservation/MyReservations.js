@@ -17,10 +17,10 @@ const ReservationListing = () => {
     fetchdata();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
-    <>
+    <div className='allreservations'>
       <h1 className="my_reservations">My car reservations</h1>
       <ReservationComponent />
-    </>
+    </div>
   );
 };
 
