@@ -35,4 +35,11 @@
   min-width: 120px;
 }
 
+.nav-hide{
+  display: none;
+}
+
+.nav-show{
+  display: block;
+}
 
