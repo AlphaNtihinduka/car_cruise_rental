@@ -15,7 +15,7 @@ import ProtectedRoutes from './pages/auth/protectedRoutes';
 
 const App = () => (
   <div className="App" id="app">
-     <Router>
+    <Router>
       <Navigate />
       <Routes>
         <Route path="/" element={<Login />} />

@@ -156,18 +156,6 @@
   margin-bottom: 1em;
 }
 
-.link-list li a {
-  color: #434b54;
-  font-size: 1em;
-  margin-bottom: 1em;
-}
-
-.link-list li a:hover {
-  border: 0.8em solid #a2dc24;
-  background-color: #a2dc24;
-  color: #fff;
-}
-
 .link-list h1 {
   font-size: 22px;
   font-style: italic;
@@ -177,22 +165,6 @@
 
 #links {
   margin-bottom: 6em;
-}
-
-.home-text {
-  display: flex;
-  gap: 1em;
-  flex-direction: column;
-  border: 2px solid rgba(219, 221, 224, 0.79);
-}
-
-.link-list {
-  display: grid;
-  margin: 1em;
-}
-
-.link-list li {
-  margin-bottom: 1em;
 }
 
 .link-list li a {
@@ -272,7 +244,7 @@
     color: #434b54;
     font-size: 1em;
   }
-  
+
   .title h1 {
     color: #434b54;
     margin: 1em;
@@ -293,7 +265,6 @@
     gap: 1.5em;
     font-weight: bold;
 } */
-
 
   .main-form {
     margin: 1em;
