@@ -4,42 +4,45 @@
   background-color: white;
   justify-content: center;
   font-weight: 600;
-
 }
-.container-form{
+
+.container-form {
   background-color: #97bf02;
   padding: 5em;
   border-radius: 10px;
   margin-top: 20em;
 }
-.form-input{
-  padding: 10px 0px;
+
+.form-input {
+  padding: 10px 0;
 }
-.form-signup{
+
+.form-signup {
   font-weight: bold;
   text-decoration: none;
 }
-.signup{
+
+.signup {
   text-decoration: none;
   color: white;
 }
-.form-button{
-  background-color:#ffffff;
+
+.form-button {
+  background-color: #fff;
   color: rgb(0, 0, 0);
-  border:none; 
+  border: none;
   font-size: medium;
   font-weight: bold;
-  border-radius:10px; 
-  padding:15px;
-  min-height:30px; 
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
   min-width: 120px;
 }
 
-.nav-hide{
+.nav-hide {
   display: none;
 }
 
-.nav-show{
+.nav-show {
   display: block;
 }
-
