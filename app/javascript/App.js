@@ -21,7 +21,7 @@ const App = () => (
         <Route exact path="/delete" element={<DeleteCarItem />} />
         <Route exact path="/cars/:car_id/reservations" element={<ReservationListing />} />
       </Routes>
-    </Router>    
+    </Router>
   </div>
 );
 export default App;

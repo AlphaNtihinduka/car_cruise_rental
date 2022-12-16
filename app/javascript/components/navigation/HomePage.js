@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CarListing from '../car_lists/CarListing';
-import Socials from '../navigation/Socials';
+import Socials from './Socials';
 import './styles.css';
 
 const HomePage = () => {
@@ -8,14 +8,14 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-     <header className="title">
+      <header className="title">
         <h1>
           Welcome! to
           {title}
           Home Page
         </h1>
-     </header>
-        <CarListing />
+      </header>
+      <CarListing />
       <div>
         <Socials />
       </div>

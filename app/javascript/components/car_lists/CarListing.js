@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
 import CarComponent from './CarComponent';
 import { setCars } from '../../redux/carActions/carActions';
 
@@ -16,18 +16,21 @@ const CarListing = () => {
   useEffect(() => {
     fetchdata();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
-    <>
-    <div>
-      <div className="carlist-title">
-        <h1>Car listing</h1>
+
+    <div className="mainCarpage">
+      <div className="car_list_heading">
+        <h1 className="latest_model">The latest car models</h1>
+        <p className="selected_model">Enjoy the ride with selected model</p>
       </div>
-      <div className="carlist-img">
+
+      <div className="all_cars_container">
         <CarComponent />
       </div>
+
     </div>
-    
-    </>
+
   );
 };
 
