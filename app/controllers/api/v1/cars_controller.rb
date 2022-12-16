@@ -1,5 +1,5 @@
 class Api::V1::CarsController < ApplicationController
-  before_action :authorize_request
+ 
 
   def index
     @cars = Car.all.order(created_at: :desc)
