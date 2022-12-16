@@ -51,15 +51,15 @@ const DeleteCarItem = () => {
   const carRender = cars.map((car) => {
     const { id, name, image } = car;
     return (
-      <div  className="dcontainer" key={id}>
+      <div className="dcontainer" key={id}>
         <Link to={`/car/${id}`}>
-          <h2 id='dcarname'>{name}</h2>
+          <h2 id="dcarname">{name}</h2>
           <div className="dimage">
             <img src={image} alt="name" />
           </div>
-          
+
         </Link>
-        <button className='dbtn' type="button" onClick={() => handleDelete(id)}>Delete</button>
+        <button className="dbtn" type="button" onClick={() => handleDelete(id)}>Delete</button>
         <ToastContainer />
       </div>
     );

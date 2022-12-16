@@ -54,7 +54,7 @@
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 } */
-.dcontainer{
+.dcontainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -62,18 +62,18 @@
   border-bottom: 2px solid #f5f6f39d;
 }
 
-#dcarname{
-  font-size:30px;
+#dcarname {
+  font-size: 30px;
   color: #a2dc24;
 }
 
-.dcarname{
+.dcarname {
   background-color: #32331908;
-    height: 40vh;
-    border-radius: 65%;
+  height: 40vh;
+  border-radius: 65%;
 }
 
-.dbtn{
+.dbtn {
   background-color: #a2dc24;
   color: #fff;
   border-radius: 10px;

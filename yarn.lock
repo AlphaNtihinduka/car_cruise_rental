@@ -2293,6 +2293,16 @@
     "is-date-object" "^1.0.1"
     "is-symbol" "^1.0.2"
 
+"esbuild-darwin-arm64@0.14.54":
+  "integrity" "sha512-OPafJHD2oUPyvJMrsCvDGkRrVCar5aVyHfWGQzY1dWnzErjrDuSETxwA2HSsyg2jORLY8yBfzc1MIpUkXlctmw=="
+  "resolved" "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.54.tgz"
+  "version" "0.14.54"
+
+"esbuild-darwin-arm64@0.15.16":
+  "integrity" "sha512-fMXaUr5ou0M4WnewBKsspMtX++C1yIa3nJ5R2LSbLCfJT3uFdcRoU/NZjoM4kOMKyOD9Sa/2vlgN8G07K3SJnw=="
+  "resolved" "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.15.16.tgz"
+  "version" "0.15.16"
+
 "esbuild-loader@^2.18.0":
   "integrity" "sha512-dr+j8O4w5RvqZ7I4PPB4EIyVTd679EBQnMm+JBB7av+vu05Zpje2IpK5N3ld1VWa+WxrInIbNFAg093+E1aRsA=="
   "resolved" "https://registry.npmjs.org/esbuild-loader/-/esbuild-loader-2.20.0.tgz"
@@ -2304,16 +2314,6 @@
     "loader-utils" "^2.0.0"
     "tapable" "^2.2.0"
     "webpack-sources" "^2.2.0"
-
-"esbuild-windows-64@0.14.54":
-  "integrity" "sha512-AoHTRBUuYwXtZhjXZbA1pGfTo8cJo3vZIcWGLiUcTNgHpJJMC1rVA44ZereBHMJtotyN71S8Qw0npiCIkW96cQ=="
-  "resolved" "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.14.54.tgz"
-  "version" "0.14.54"
-
-"esbuild-windows-64@0.15.16":
-  "integrity" "sha512-HjW1hHRLSncnM3MBCP7iquatHVJq9l0S2xxsHHj4yzf4nm9TU4Z7k4NkeMlD/dHQ4jPlQQhwcMvwbJiOefSuZw=="
-  "resolved" "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.15.16.tgz"
-  "version" "0.15.16"
 
 "esbuild@^0.14.38":
   "integrity" "sha512-Cy9llcy8DvET5uznocPyqL3BFRrFXSVqbgpMJ9Wz8oVjZlh/zUSNbPRbov0VX7VxN2JH1Oa0uNxZ7eLRb62pJA=="
