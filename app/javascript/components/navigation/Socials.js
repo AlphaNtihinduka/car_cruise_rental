@@ -1,6 +1,10 @@
 import React from 'react';
 import {
-  FaTwitter, FaFacebook, FaGlide, FaVimeo, FaPinterest,
+  FaTwitter,
+  FaFacebook,
+  FaGlide,
+  FaVimeo,
+  FaPinterest,
 } from 'react-icons/fa';
 import './styles.css';
 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import './styles.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const options = [
   { value: '/assets/audi.png', label: 'Audi' },
@@ -37,6 +39,17 @@ const AddCar = () => {
         'Content-Type': 'application/json',
       },
     });
+
+    if (response.status === 200) {
+      toast.success('Cars created successfully!', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      toast.error(`Error creating a new car: ${response}`, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
+
     await response.json();
   };
 
@@ -48,21 +61,40 @@ const AddCar = () => {
           <form className="main-form">
             <div className="form-group">
               <div className="nform">
-                {/* "jsx-a11y/label-has-associated-control": "off" */}
                 <label htmlFor="name">Name</label>
-                <input type="text" value={name} id="name" onChange={(event) => setname(event.target.value)} />
+                <input
+                  type="text"
+                  value={name}
+                  id="name"
+                  onChange={(event) => setname(event.target.value)}
+                />
               </div>
               <div className="iform">
                 <label htmlFor="user_id">User ID</label>
-                <input type="text" value={user} id="user_id" onChange={(event) => setUser(event.target.value)} />
+                <input
+                  type="text"
+                  value={user}
+                  id="user_id"
+                  onChange={(event) => setUser(event.target.value)}
+                />
               </div>
               <div className="pform">
                 <label htmlFor="price_per_day">Price Per Day</label>
-                <input type="text" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
+                <input
+                  type="text"
+                  value={pricePerDay}
+                  id="price_per_day"
+                  onChange={(event) => setPricePerDay(event.target.value)}
+                />
               </div>
               <div className="dform">
                 <label htmlFor="description">Description</label>
-                <input type="text" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
+                <input
+                  type="text"
+                  value={description}
+                  id="description"
+                  onChange={(event) => setDescription(event.target.value)}
+                />
               </div>
               <div className="form-image">
                 <label htmlFor="image">Image</label>
@@ -73,44 +105,10 @@ const AddCar = () => {
               </div>
             </div>
           </form>
-
-          {/* <Table className="table d-flex grid-template-column-1fr 1fr">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>User ID</th>
-                <th>Price Per Day</th>
-                <th>Description</th>
-                <th>Image</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="text" value={name} id="name" onChange={(event) => setname(event.target.value)} />
-                </td>
-                <td>
-                  <input type="text" value={user} id="user_id" onChange={(event) => setUser(event.target.value)} />
-                </td>
-                <td>
-                  <input type="text" value={pricePerDay} id="price_per_day" onChange={(event) => setPricePerDay(event.target.value)} />
-                </td>
-                <td>
-                  <input type="text" value={description} id="description" onChange={(event) => setDescription(event.target.value)} />
-                </td>
-                <td>
-                <select>
-               <input type="text" value={image} id="image" onChange={(event) => setImage(event.target.value)} />
-                  <option >
-                    Select Image
-                 </option>
-          </select>
-                </td>
-              </tr>
-            </tbody>
-          </Table> */}
         </div>
       </div>
+      <ToastContainer />
+
     </div>
   );
 };

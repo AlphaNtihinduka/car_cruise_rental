@@ -14,8 +14,7 @@ import ProtectedRoutes from './pages/auth/protectedRoutes';
 // import Nav from './components/navigation/Nav';
 
 const App = () => (
-
-  <div className="App">
+  <div className="App" id="app">
     <Router>
       <Navigate />
       <Routes>

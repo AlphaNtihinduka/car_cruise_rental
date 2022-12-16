@@ -34,7 +34,7 @@ class Api::V1::CarsController < ApplicationController
   # DELETE /cars/1
   def destroy
     @car = Car.find(params[:id])
-    @car.delete
+    @car.destroy
   end
 
   alias delete destroy

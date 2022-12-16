@@ -9,6 +9,13 @@
   list-style: none;
 }
 
-#nav-show {
-  display: block;
+.App {
+  display: flex;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .App {
+    flex-direction: column;
+  }
 }
