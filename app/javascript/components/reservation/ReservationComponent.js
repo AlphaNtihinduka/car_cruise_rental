@@ -12,22 +12,21 @@ const ReservationComponent = () => {
           </div>
            
         </div>
-        <div>
+        <div className='reservation_info'>
           <h3>{reservation.car.name}</h3> 
-          <p>
+          <p className='info'>
             Period: {' '}
             {reservation.days}
             {' '}
             days
           </p>
-          <p>
+          <p className='pick_date'>
             Pick date: {' '}
             {reservation.pick_date}
           </p>
-          <p>Total pricing: ${reservation.car.price_per_day * reservation.days}</p>
+          <p className='info'>Total pricing: ${reservation.car.price_per_day * reservation.days}</p>
          </div>
       </div>
-      <button className='cancel_btn'>Cancel reservation</button>
     </div>
   ));
   return <>{reservationRender}</>;
