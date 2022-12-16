@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import '../assets/stylesheets/application.css';
 import AddCar from './components/navigation/AddCar';
 import Navigate from './components/navigation/Navigate';
