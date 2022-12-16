@@ -36,6 +36,7 @@ const AddReservation = () => {
     obj.value = car.id;
     obj.label = car.name;
     options.push(obj);
+    return options;
   });
 
   // Empty array means this effect will only run once when the component mounts
