@@ -1,46 +1,366 @@
+/* .navbar {
+  display: block;
+  min-height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-item {
+  margin: 20px 0;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: #3a4a42;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-link:hover {
+  color: #36b37e;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-left: 80%;
+  color: #000;
+  margin-top: -40px;
+  z-index: 5;
+  position: fixed;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  z-index: 999;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+} */
+
 .socials {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
 .socials li {
   margin: 0 10px;
 }
 
-.addcar-arrow {
+.title h1 {
+  color: #434b54;
+  font-style: italic;
+  margin: 1em;
+}
+
+.form-container {
   display: flex;
+  flex-direction: column;
+  gap: 5em;
+  border: 2px solid #434b54;
+  margin-bottom: 5em;
+  background-color: #a2dc24;
+}
+
+.main-form {
+  margin: 1em;
+  padding: 1em;
+}
+
+.add-form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.form-image {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  gap: 4em;
+}
+
+.nform,
+.pform,
+.iform,
+.dform {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-bottom: 1em;
+  flex-wrap: nowrap;
+  align-content: center;
   justify-content: space-between;
-  padding: 10px;
 }
 
-.left-arrow {
-  border: 32px solid rgba(152, 181, 7, 0.89);
-  border-radius: 33%;
+.btn-form {
+  width: 39%;
+  height: 33px;
+  border-radius: 10px;
+  margin-left: 98px;
 }
 
-.right-arrow {
-  border: 32px solid rgba(152, 181, 7, 0.89);
-  border-radius: 33%;
+.link-container {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  background-color: rgba(219, 221, 224, 0.79);
+
+  /* border: 2px solid rgba(219, 221, 224, 0.79); */
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2em;
+  margin: 1em;
+}
+
+.hamburger {
+  margin: 1em;
+}
+
+/* .nav-menu {
+  display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    font-weight: bold;
+    margin-bottom: 7em;
+    margin-top: 2em;
+} */
+
+.link-list li {
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.link-list li a {
+  color: #434b54;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.link-list li a:hover {
+  border: 0.8em solid #a2dc24;
+  background-color: #a2dc24;
+  color: #fff;
+}
+
+.link-list h1 {
+  font-size: 22px;
+  font-style: italic;
+  color: #434b54;
+  margin-top: 1em;
+}
+
+#links {
+  margin-bottom: 6em;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.inside_Arrows {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rArroww_container,
+.lArroww_container {
+  display: flex;
+  height: 5.5vh;
+  width: 9%;
+  align-items: center;
+  justify-content: center;
+}
+
+.lArroww_container {
+  border-radius: 0 76px 76px 0;
+}
+
+.rArroww_container {
+  border-radius: 76px 0 0 76px;
 }
 
 .add-form-container {
   background-color: rgba(152, 181, 7, 0.89);
 }
 
-.form-container {
-  display: flex;
-}
+@media only screen and (min-width: 768px) {
+  /* .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    margin-left: 100%;
+    padding: 30px 20px;
+    margin-top: 14px;
+  }
 
-.inputs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    margin-left: 100%;
+    padding: 30px 20px;
+    margin-top: 14px;
+  }
 
-.reservation {
-  box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
-  padding: 1rem;
+  .nav-item {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: row;
+    margin: 0 35px;
+  }
+
+  .hamburger {
+    display: none;
+  } */
+
+  .socials {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 20px 0 0 0;
+  }
+
+  .socials li {
+    margin: 0 10px;
+  }
+
+  .title h1 {
+    color: #434b54;
+    margin: 1em;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    border: 2px solid #434b54;
+    margin-bottom: 5em;
+    background-color: #a2dc24;
+  }
+
+  /* .nav-menu {
+  display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    font-weight: bold;
+} */
+
+  .main-form {
+    margin: 1em;
+    padding: 1em;
+  }
+
+  .add-form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .form-image {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    gap: 4em;
+  }
+
+  .nform,
+  .pform,
+  .iform,
+  .dform {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-bottom: 1em;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .btn-form {
+    width: 39%;
+    height: 33px;
+    border-radius: 10px;
+    margin-left: 98px;
+  }
+
+  .link-container {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    border: 2px solid rgba(219, 221, 224, 0.79);
+  }
+
+  .link-list {
+    display: grid;
+    margin: 1em;
+  }
+
+  .link-list li {
+    margin-bottom: 1em;
+  }
+
+  .link-list li a {
+    color: #434b54;
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  .link-list li a:hover {
+    border: 0.8em solid #a2dc24;
+    background-color: #a2dc24;
+    color: #fff;
+  }
+
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+  }
+
+  .add-form-container {
+    background-color: rgba(152, 181, 7, 0.89);
+  }
 }

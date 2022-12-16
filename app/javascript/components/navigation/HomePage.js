@@ -1,4 +1,5 @@
 import React from 'react';
+import CarListing from '../car_lists/CarListing';
 import Socials from './Socials';
 import './styles.css';
 
@@ -6,18 +7,19 @@ const HomePage = () => {
   const title = ' Car Cruise Rental ';
 
   return (
-    <header className="navbar">
-      <div className="title">
+    <div className="home-container">
+      <header className="title">
         <h1>
           Welcome! to
           {title}
-          HomePage
+          Home Page
         </h1>
-      </div>
+      </header>
+      <CarListing />
       <div>
         <Socials />
       </div>
-    </header>
+    </div>
   );
 };
 export default HomePage;

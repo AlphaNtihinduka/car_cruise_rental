@@ -10,7 +10,7 @@ development:
   <<: *default
   database: car_cruise_rental_development
   username: postgres
-  password: hulk41
+  password: postgres
   port: 5432
 
   # The specified database role being used to connect to postgres.
@@ -47,7 +47,7 @@ test:
   <<: *default
   database: car_cruise_rental_test
   username: postgres
-  password: hulk41
+  password: postgres
   port: 5432
 
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
