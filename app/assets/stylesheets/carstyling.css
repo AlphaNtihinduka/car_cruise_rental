@@ -1,0 +1,106 @@
+.latest_model {
+  text-align: center;
+  color: #99c210;
+  margin-bottom: 0.3rem;
+}
+
+.mainCarpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  margin-top: 1rem;
+}
+
+.selected_model {
+  text-align: center;
+  padding: 5px;
+  border-bottom: 2px dotted #99c210;
+  margin-bottom: 10px;
+  border-bottom-width: 0.5rem;
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.all_cars_container {
+  display: flex;
+  position: relative;
+  gap: 5em;
+  justify-content: space-evenly;
+}
+
+.car_card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  background-color: #32331908;
+  height: 40vh;
+  border-radius: 65%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.image img:hover {
+  background-color: #9ff152;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.car_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.name_description {
+  max-width: 30rem;
+  height: 6rem;
+  padding-left: 0.5rem;
+}
+
+.name_description h4 {
+  text-align: center;
+  color: #ffc600;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.name_description p {
+  text-align: center;
+  color: rgb(22, 22, 22);
+  margin-top: 0.1rem;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.title h1 {
+  color: #434b54;
+  font-size: 0.9em;
+  margin: 1em;
+  background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .image {
+    height: 40vh;
+  }
+
+  .name_description {
+    height: 8rem;
+  }
+}

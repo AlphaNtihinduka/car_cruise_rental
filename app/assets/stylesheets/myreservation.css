@@ -1,0 +1,50 @@
+.reservation_image {
+  max-height: 10rem;
+  max-width: 13rem;
+}
+
+.reservation_image img {
+  height: 100%;
+  width: 100%;
+}
+
+.my_reservation_container {
+  box-shadow: rgba(18, 87, 1, 0.35) 0 5px 15px;
+  padding: 1rem;
+  margin: 0.5rem 0.2rem;
+}
+
+.car_reservation_info_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.my_reservations {
+  text-align: center;
+  color: #99c210;
+  margin-bottom: 1rem;
+}
+
+.cancel_btn {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.reservation_info .info {
+  background-color: #99c210;
+  padding: 0.3rem;
+  margin: 0.5rem 0;
+  border: 2px dotted #ffc600;
+}
+
+@media only screen and (max-width: 400px) {
+  .car_reservation_info_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .my_reservations {
+    font-size: 1.4rem;
+  }
+}
